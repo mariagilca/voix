@@ -2,16 +2,90 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://voix.md/blog</id>
     <title>voix Blog</title>
-    <updated>2021-08-26T00:00:00.000Z</updated>
+    <updated>2026-01-03T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://voix.md/blog"/>
     <subtitle>voix Blog</subtitle>
-    <icon>https://voix.md/img/favicon.ico</icon>
+    <icon>https://voix.md/img/favicon.svg</icon>
+    <entry>
+        <title type="html"><![CDATA[Build an acting portfolio that gets you cast]]></title>
+        <id>https://voix.md/blog/acting-portfolio-gets-you-cast</id>
+        <link href="https://voix.md/blog/acting-portfolio-gets-you-cast"/>
+        <updated>2026-01-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Ready to work? Start building your portfolio →]]></summary>
+        <content type="html"><![CDATA[<p>Ready to work? Start building your portfolio →</p>
+<p>A resume lists what you did. A portfolio shows what you can do.</p>
+<p>For casting directors and agents, your portfolio is the only thing that matters before you enter the room. It proves your range. It validates your talent.</p>
+<p>This guide explains how to build a portfolio that works as hard as you do. You will learn to capture attention, define your brand, and own your online presence without paying monthly rent on your website.</p>
+<p>Whether you are a student or a working professional, this is how you set yourself apart.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-essentials">The essentials<a href="https://voix.md/blog/acting-portfolio-gets-you-cast#the-essentials" class="hash-link" aria-label="Direct link to The essentials" title="Direct link to The essentials" translate="no">​</a></h2>
+<ol>
+<li class="">Gather your materials. Get professional headshots, a clean resume, and a sharp showreel.</li>
+<li class="">Write a clear bio. State your training and your type. Be honest.</li>
+<li class="">Build on solid ground. Use open-source tools like Voix. Pay once. Own the code.</li>
+<li class="">Add social proof. Display reviews, awards, and press.</li>
+<li class="">Stay current. Update your look and your credits regularly.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-build-your-portfolio-in-5-steps">How to build your portfolio in 5 steps<a href="https://voix.md/blog/acting-portfolio-gets-you-cast#how-to-build-your-portfolio-in-5-steps" class="hash-link" aria-label="Direct link to How to build your portfolio in 5 steps" title="Direct link to How to build your portfolio in 5 steps" translate="no">​</a></h2>
+<p>Your portfolio must be professional and personal. Follow these steps to build a site that tells the truth about your ability.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-select-your-materials">1. Select your materials<a href="https://voix.md/blog/acting-portfolio-gets-you-cast#1-select-your-materials" class="hash-link" aria-label="Direct link to 1. Select your materials" title="Direct link to 1. Select your materials" translate="no">​</a></h3>
+<p>Start with the basics. Do not clutter the page. You need four things:</p>
+<ul>
+<li class="">Headshots: Pick two or three images. One commercial (warm), one theatrical (serious), one neutral. Use good lighting. High resolution is mandatory.</li>
+<li class="">Resume: List your contact info, union status, training, and credits. Keep it detailed. If you have special skills (combat, dance, accents), list them here.</li>
+<li class="">Showreel: You have sixty seconds to impress a director. Keep your reel under two minutes. Put your best acting in the first ten seconds.</li>
+<li class="">Contact info: Make it easy to find you.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-write-an-honest-bio">2. Write an honest bio<a href="https://voix.md/blog/acting-portfolio-gets-you-cast#2-write-an-honest-bio" class="hash-link" aria-label="Direct link to 2. Write an honest bio" title="Direct link to 2. Write an honest bio" translate="no">​</a></h3>
+<p>Your bio defines you. It is your introduction. Keep it to two paragraphs.</p>
+<p>Casting directors want to know the person behind the character. Mention your background, your training, and what drives you. If you studied at a specific conservatory or have a niche skill, write it down.</p>
+<p>Example:</p>
+<blockquote>
+<p>"I am a Chicago-based actor focused on gritty, realistic drama. I trained at The Second City and have appeared in independent features and regional theater. I bring intensity and focus to the work."</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-design-and-own-your-platform">3. Design and own your platform<a href="https://voix.md/blog/acting-portfolio-gets-you-cast#3-design-and-own-your-platform" class="hash-link" aria-label="Direct link to 3. Design and own your platform" title="Direct link to 3. Design and own your platform" translate="no">​</a></h3>
+<p>Most portfolio builders rent you space. They charge you every month to keep your site alive.</p>
+<p>Don't rent. Own.</p>
+<p>Use an open-source builder like Voix. You pay a single fee for the build. The code belongs to you. The only recurring cost is the domain name (the .com), which you pay directly to the registrar.</p>
+<p>Your site needs these pages:</p>
+<ul>
+<li class="">Home/About: Your face and your bio.</li>
+<li class="">Media: Your showreel and voice clips.</li>
+<li class="">Gallery: Production stills and headshots.</li>
+<li class="">Resume: A viewable list and a downloadable PDF.</li>
+<li class="">Contact: Representation info and a direct email.</li>
+</ul>
+<p>Design tip: Keep it clean. Use white space. Use black text. Do not use flashy animations. Let your acting be the loudest thing on the page.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-prove-your-value">4. Prove your value<a href="https://voix.md/blog/acting-portfolio-gets-you-cast#4-prove-your-value" class="hash-link" aria-label="Direct link to 4. Prove your value" title="Direct link to 4. Prove your value" translate="no">​</a></h3>
+<p>Anyone can call themselves an actor. Prove it.</p>
+<p>Add a section for press and achievements. This is social proof. It tells a director that others have hired you and liked the result.</p>
+<ul>
+<li class="">Awards: Display logos or certificates.</li>
+<li class="">Reviews: Quote the best lines from reputable sources.</li>
+<li class="">Testimonials: Ask directors or coaches for a sentence about your work ethic.</li>
+</ul>
+<p>If you are working on something now, list it. An active actor is a hireable actor.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-keep-it-fresh">5. Keep it fresh<a href="https://voix.md/blog/acting-portfolio-gets-you-cast#5-keep-it-fresh" class="hash-link" aria-label="Direct link to 5. Keep it fresh" title="Direct link to 5. Keep it fresh" translate="no">​</a></h3>
+<p>A stale portfolio hurts your career.</p>
+<p>Update your headshots when you change your hair or age. Update your reel when you get better footage. If a credit on your resume is five years old and amateur, cut it.</p>
+<p>Your portfolio is a living document. Treat it that way.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="frequently-asked-questions">Frequently asked questions<a href="https://voix.md/blog/acting-portfolio-gets-you-cast#frequently-asked-questions" class="hash-link" aria-label="Direct link to Frequently asked questions" title="Direct link to Frequently asked questions" translate="no">​</a></h2>
+<p>How long should my reel be? One to two minutes. Quality beats quantity. If the audio is bad, cut it.</p>
+<p>Do I need a printed portfolio? Yes. Digital gets you the audition. Print is for the room. Bring a headshot and resume stapled together.</p>
+<p>How often should I update? Every six months. Or immediately after you finish a major project.</p>]]></content>
+        <author>
+            <name>Voix Studio</name>
+            <uri>https://voix.studio</uri>
+        </author>
+        <category label="Portfolio" term="Portfolio"/>
+        <category label="acting" term="acting"/>
+        <category label="Process" term="Process"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Maintenance that keeps your voice current]]></title>
         <id>https://voix.md/blog/maintenance-that-works</id>
         <link href="https://voix.md/blog/maintenance-that-works"/>
-        <updated>2021-08-26T00:00:00.000Z</updated>
+        <updated>2025-08-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[A portfolio should not drift out of date. The annual care plan keeps your]]></summary>
         <content type="html"><![CDATA[<p>A portfolio should not drift out of date. The annual care plan keeps your
 content current without a long queue or another subscription.</p>
@@ -34,7 +108,7 @@ content current without a long queue or another subscription.</p>
         <title type="html"><![CDATA[The six beats of a strong case study]]></title>
         <id>https://voix.md/blog/case-study-beats</id>
         <link href="https://voix.md/blog/case-study-beats"/>
-        <updated>2021-08-01T00:00:00.000Z</updated>
+        <updated>2025-08-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Great case studies are short and structured. We use six beats so every project]]></summary>
         <content type="html"><![CDATA[<p>Great case studies are short and structured. We use six beats so every project
 reads quickly and still feels human.</p>
@@ -60,7 +134,7 @@ reads quickly and still feels human.</p>
         <title type="html"><![CDATA[The no-license portfolio stack]]></title>
         <id>https://voix.md/blog/no-license-portfolio-stack</id>
         <link href="https://voix.md/blog/no-license-portfolio-stack"/>
-        <updated>2019-05-29T00:00:00.000Z</updated>
+        <updated>2025-05-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Voix sites are built on an open-source stack, which means you never pay]]></summary>
         <content type="html"><![CDATA[<p>Voix sites are built on an open-source stack, which means you never pay
 software license fees to keep your portfolio live.</p>
@@ -86,7 +160,7 @@ control.</p>]]></content>
         <title type="html"><![CDATA[Why voice matters more than a template]]></title>
         <id>https://voix.md/blog/voice-first-portfolios</id>
         <link href="https://voix.md/blog/voice-first-portfolios"/>
-        <updated>2019-05-28T00:00:00.000Z</updated>
+        <updated>2025-05-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[A portfolio should sound like you, not like the last template you downloaded.]]></summary>
         <content type="html"><![CDATA[<p>A portfolio should sound like you, not like the last template you downloaded.
 At Voix, the goal is simple: shape the story first, then design the site

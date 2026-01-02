@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkvoix=globalThis.webpackChunkvoix||[]).push([[8947],{6600(o){o.exports=JSON.parse('{"authors":[{"name":"Voix Studio","title":"Portfolio studio","url":"https://voix.studio","page":{"permalink":"/blog/authors/voix"},"imageURL":"/img/logo.svg","key":"voix","count":4}]}')}}]);
