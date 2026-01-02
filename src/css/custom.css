@@ -28,3 +28,40 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Footer polish to better match voix's visual tone. */
+.footer {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(244, 107, 79, 0.08), transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(45, 58, 47, 0.08), transparent 40%),
+    var(--voix-cream);
+  border-top: 1px solid var(--voix-outline);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer__title {
+  color: var(--voix-olive);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer__link-item {
+  color: var(--voix-slate);
+}
+
+.footer__link-item:hover {
+  color: var(--voix-coral);
+}
+
+.footer__logo {
+  max-width: 120px;
+  opacity: 0.9;
+}
+
+.footer__copyright {
+  color: var(--voix-slate);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
