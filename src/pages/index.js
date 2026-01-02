@@ -15,14 +15,12 @@ function HomepageHeader() {
             No-license portfolio studio
           </div>
           <Heading as="h1" className={styles.heroTitle}>
-            <span className={styles.heroBrand}>{siteConfig.title}</span> builds
-            portfolio sites that sound like you.
+            Your work deserves a portfolio that sounds like you.
           </Heading>
           <p className={styles.heroSubtitle}>
             Launch a credible, fast, and elegant portfolio without wrestling
-            with templates. We design, write, and publish your site in days,
-            then keep it updated with an annual care plan. No license fees,
-            ever.
+            with templates. Get design, writing, and publishing in days, then
+            keep it updated with an annual care plan. No license fees, ever.
           </p>
           <div className={styles.heroActions}>
             <Link className={styles.buttonPrimary} to="mailto:hello@voix.studio">
@@ -229,14 +227,14 @@ export default function Home() {
               <div className={styles.ctaCard}>
                 <div>
                   <Heading as="h2" className={styles.ctaTitle}>
-                    Ready to launch a portfolio with Voix?
+                    Ready to launch a portfolio with voix?
                   </Heading>
                   <p className={styles.ctaSubtitle}>
                     Tell us about your goals and we will share a tailored plan
                     within 24 hours.
                   </p>
                 </div>
-                <Link className={styles.buttonPrimary} to="mailto:hello@voix.studio">
+                <Link className={styles.buttonPrimary} to="mailto:mariag@voix.md">
                   Book a kickoff
                 </Link>
               </div>
