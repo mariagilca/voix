@@ -3,7 +3,7 @@
     var navbar = document.querySelector('.navbar');
     if (!navbar) return;
 
-    if (window.scrollY > 8) {
+    if (window.scrollY > 0) {
       navbar.classList.add('scrolling');
     } else {
       navbar.classList.remove('scrolling');
