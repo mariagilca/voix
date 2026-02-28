@@ -1,24 +1,39 @@
-portfolio:
-  label: Portfolio
-  permalink: /portfolio
-  description: Portfolio strategy and structure.
+docs-migration:
+  label: Docs Migration
+  permalink: /docs-migration
+  description: Moving documentation from proprietary tools to open-source stacks.
 
-voice:
-  label: Voice
-  permalink: /voice
-  description: Voice-first writing and narrative.
+docs-as-code:
+  label: Docs as Code
+  permalink: /docs-as-code
+  description: Git-based documentation workflows with CI/CD and quality checks.
 
-pricing:
-  label: Pricing
-  permalink: /pricing
-  description: Transparent pricing and no license fees.
+content-structure:
+  label: Content Structure
+  permalink: /content-structure
+  description: Patterns that make documentation easier to navigate and maintain.
 
-maintenance:
-  label: Maintenance
-  permalink: /maintenance
-  description: Ongoing care and updates.
+developer-experience:
+  label: Developer Experience
+  permalink: /developer-experience
+  description: Documentation practices that improve onboarding and usability.
 
-process:
-  label: Process
-  permalink: /process
-  description: How Voix works with clients.
+information-architecture:
+  label: Information Architecture
+  permalink: /information-architecture
+  description: Taxonomy, navigation, and information models for documentation.
+
+docs-architecture:
+  label: Docs Architecture
+  permalink: /docs-architecture
+  description: Platform and system design decisions for scalable documentation.
+
+governance:
+  label: Governance
+  permalink: /governance
+  description: Ownership, standards, and lifecycle controls for docs operations.
+
+docs-strategy:
+  label: Docs Strategy
+  permalink: /docs-strategy
+  description: Documentation planning tied to product and support outcomes.

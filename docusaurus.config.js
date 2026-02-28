@@ -24,6 +24,8 @@ const config = {
   url: 'https://voix.md',
   baseUrl: '/',
 
+  scripts: ['/js/navbar-scroll.js'],
+
   // GitHub pages deployment config.
   organizationName: 'mariagilca', // your real GitHub username
   projectName: 'voix',
@@ -82,15 +84,12 @@ const config = {
         title: 'voix',
         logo: {
           alt: 'voix logo',
-          src: 'img/logo.svg',
+          src: 'img/logo-nav.svg',
+          srcDark: 'img/logo-nav-dark.svg',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Studio Guide',
-          },
+          {to: '/services', label: 'Services', position: 'left'},
+          {to: '/pricing', label: 'Pricing', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
         ],
       },
@@ -100,7 +99,13 @@ const config = {
         respectPrefersColorScheme: false,
       },
       footer: {
-        style: 'dark',
+        style: 'light',
+        logo: {
+          alt: 'voix logo',
+          src: 'img/logo.svg',
+          srcDark: 'img/logo-dark.svg',
+          href: '/',
+        },
         links: [
           {
             title: 'Start',
