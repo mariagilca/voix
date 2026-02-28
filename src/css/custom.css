@@ -53,6 +53,14 @@ html[data-theme='dark'] body {
   overflow: hidden;
 }
 
+html.blog-wrapper .theme-layout-main.main-wrapper {
+  padding-top: 8.8rem;
+}
+
+html.blog-wrapper .theme-layout-main.main-wrapper > .container.margin-vert--lg {
+  margin-top: 0;
+}
+
 .navbar {
   background: transparent;
   border-bottom: 0;
@@ -245,6 +253,10 @@ html[data-theme='dark'] body {
 }
 
 @media screen and (max-width: 996px) {
+  html.blog-wrapper .theme-layout-main.main-wrapper {
+    padding-top: 7.2rem;
+  }
+
   .navbar {
     padding-top: 0.64rem;
   }
@@ -261,6 +273,12 @@ html[data-theme='dark'] body {
 
   .navbar__title {
     font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  html.blog-wrapper .theme-layout-main.main-wrapper {
+    padding-top: 6.8rem;
   }
 }
 
