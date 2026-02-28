@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'voix',
-  tagline: 'Give your work a voice, not a license fee.',
+  tagline: 'Documentation migration to open-source stacks without lock-in.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -23,6 +23,8 @@ const config = {
   // GitHub Pages / production URL
   url: 'https://voix.md',
   baseUrl: '/',
+
+  scripts: ['/js/navbar-scroll.js'],
 
   // GitHub pages deployment config.
   organizationName: 'mariagilca', // your real GitHub username
@@ -85,67 +87,74 @@ const config = {
         title: 'voix',
         logo: {
           alt: 'voix logo',
-          src: 'img/logo.svg',
+          src: 'img/logo-nav.svg',
+          srcDark: 'img/logo-nav-dark.svg',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Studio Guide',
-          },
+          {to: '/services', label: 'Services', position: 'left'},
+          {to: '/pricing', label: 'Pricing', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            href: 'mailto:hello@voix.studio',
+            label: 'Contact',
             position: 'right',
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
+        logo: {
+          alt: 'voix logo',
+          src: 'img/logo.svg',
+          srcDark: 'img/logo-dark.svg',
+          href: '/',
+        },
         links: [
           {
-            title: 'Docs',
+            title: 'Start',
             items: [
               {
                 label: 'Studio Guide',
                 to: '/docs/intro',
               },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
               {
                 label: 'Blog',
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'About',
+                to: '/about',
+              },
+            ],
+          },
+          {
+            title: 'Contact',
+            items: [
+              {
+                label: 'mariag@voix.md',
+                href: 'mailto:mariag@voix.md',
+              },
+            ],
+          },
+          {
+            title: 'Legal',
+            items: [
+              {
+                label: 'Imprint',
+                to: '/imprint',
+              },
+              {
+                label: 'Terms and conditions',
+                to: '/terms',
+              },
+              {
+                label: 'Confidentiality policy',
+                to: '/confidentiality',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} voix.`,
+        copyright: '© 2026 voix. All rights reserved.',
       },
       prism: {
         theme: prismThemes.github,
