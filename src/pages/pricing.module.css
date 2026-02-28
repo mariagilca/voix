@@ -17,7 +17,7 @@
 
 .hero {
   position: relative;
-  padding: 5rem 0 3rem;
+  padding: 8.8rem 0 3rem;
   overflow: hidden;
 }
 
@@ -361,12 +361,18 @@
   }
 
   .hero {
-    padding-top: 4.3rem;
+    padding-top: 7.2rem;
   }
 
   .ctaCard {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .hero {
+    padding-top: 6.8rem;
   }
 }
 
