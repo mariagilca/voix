@@ -155,7 +155,7 @@ export default function Home() {
     <Layout
       title="Voix | Documentation Migration"
       description="Arcade-inspired homepage for Voix documentation migration services."
-      wrapperClassName={styles.homeWrapper}>
+      wrapperClassName={`${styles.homeWrapper} home-page-wrapper`}>
       <div className={styles.page}>
         <header className={styles.hero}>
           <div className={styles.heroGradientA} aria-hidden="true" />
@@ -173,7 +173,7 @@ export default function Home() {
                   We consolidate content, rebuild structure, train contributors, and ship CI/CD publishing.
                 </p>
                 <div className={styles.actions}>
-                  <Link className={styles.buttonPrimary} to="mailto:hello@voix.studio">
+                  <Link className={styles.buttonPrimary} to="mailto:mariag@voix.com">
                     Get started for free
                   </Link>
                   <Link className={styles.buttonSecondary} to="/services">
@@ -183,21 +183,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Heading as="h1" className={styles.heroTitle}>
-            Your work deserves a portfolio that sounds like you.
-          </Heading>
-          <p className={styles.heroSubtitle}>
-            Launch a credible, fast, and elegant portfolio without wrestling
-            with templates. Get design, writing, and publishing in days, then
-            keep it updated with an annual care plan. No license fees, ever.
-          </p>
-          <div className={styles.heroActions}>
-            <Link className={styles.buttonPrimary} to="mailto:hello@voix.studio">
-              Start a project
-            </Link>
-            <Link className={styles.buttonGhost} to="#pricing">
-              See pricing
-            </Link>
+        </header>
+
+        <section className={styles.mediaHeadingSection}>
+          <div className="container">
+            <Heading as="h2" className={styles.mediaHeading}>
+              Narrative-first documentation migration that teams actually adopt.
+            </Heading>
           </div>
         </section>
 
@@ -375,15 +367,20 @@ export default function Home() {
               <div className={styles.ctaCard}>
                 <div>
                   <Heading as="h2" className={styles.ctaTitle}>
-                    Ready to launch a portfolio with voix?
+                    Build AI-powered documentation operations that drive action.
                   </Heading>
                   <p className={styles.ctaSubtitle}>
                     Share your current stack and we will send a practical migration plan with rollout milestones.
                   </p>
                 </div>
-                <Link className={styles.buttonPrimary} to="mailto:mariag@voix.md">
-                  Book a kickoff
-                </Link>
+                <div className={styles.ctaButtons}>
+                  <Link className={styles.buttonPrimary} to="mailto:mariag@voix.com">
+                    Book kickoff
+                  </Link>
+                  <Link className={styles.buttonSecondaryLight} to="/pricing">
+                    See pricing
+                  </Link>
+                </div>
               </div>
             </div>
           </section>

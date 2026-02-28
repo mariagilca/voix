@@ -30,7 +30,8 @@ export default function ServicesPage() {
   return (
     <Layout
       title="Services | Voix"
-      description="Voix offers documentation consolidation, implementation, team onboarding, and CI/CD delivery for modern owned platforms.">
+      description="Voix offers documentation consolidation, implementation, team onboarding, and CI/CD delivery for modern owned platforms."
+      wrapperClassName="services-page-wrapper">
       <div className={styles.page}>
         <header className={styles.hero}>
           <div className={styles.heroGlowA} aria-hidden="true" />
@@ -48,7 +49,7 @@ export default function ServicesPage() {
                 become faster and safer.
               </p>
               <div className={styles.heroActions}>
-                <Link className={styles.buttonPrimary} to="mailto:hello@voix.studio">
+                <Link className={styles.buttonPrimary} to="mailto:mariag@voix.com">
                   Request a quote
                 </Link>
                 <Link className={styles.buttonGhost} to="/pricing">
@@ -156,7 +157,7 @@ export default function ServicesPage() {
                     scope with implementation and onboarding steps.
                   </p>
                 </div>
-                <Link className={styles.buttonPrimary} to="mailto:hello@voix.studio">
+                <Link className={styles.buttonPrimary} to="mailto:mariag@voix.com">
                   Book kickoff
                 </Link>
               </div>

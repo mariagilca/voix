@@ -16,7 +16,8 @@ export default function PricingPage() {
   return (
     <Layout
       title="Pricing | Voix"
-      description="Documentation migration pricing focused on ownership, employee onboarding, and CI/CD delivery.">
+      description="Documentation migration pricing focused on ownership, employee onboarding, and CI/CD delivery."
+      wrapperClassName="pricing-page-wrapper">
       <div className={styles.page}>
         <header className={styles.hero}>
           <div className={styles.heroGlowA} aria-hidden="true" />
@@ -33,7 +34,7 @@ export default function PricingPage() {
                 employee onboarding, and CI/CD-ready delivery.
               </p>
               <div className={styles.heroActions}>
-                <Link className={styles.buttonPrimary} to="mailto:hello@voix.studio">
+                <Link className={styles.buttonPrimary} to="mailto:mariag@voix.com">
                   Request quote
                 </Link>
                 <Link className={styles.buttonGhost} to="/services">
@@ -158,7 +159,7 @@ export default function PricingPage() {
                     scope with timeline and pricing.
                   </p>
                 </div>
-                <Link className={styles.buttonPrimary} to="mailto:hello@voix.studio">
+                <Link className={styles.buttonPrimary} to="mailto:mariag@voix.com">
                   Contact us
                 </Link>
               </div>

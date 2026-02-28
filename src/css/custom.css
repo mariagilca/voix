@@ -53,11 +53,14 @@ html[data-theme='dark'] body {
   overflow: hidden;
 }
 
-html.blog-wrapper .theme-layout-main.main-wrapper {
+html.blog-wrapper .theme-layout-main.main-wrapper,
+html.plugin-pages .theme-layout-main.main-wrapper:not(.home-page-wrapper):not(.services-page-wrapper):not(.pricing-page-wrapper) {
   padding-top: 8.8rem;
 }
 
-html.blog-wrapper .theme-layout-main.main-wrapper > .container.margin-vert--lg {
+html.blog-wrapper .theme-layout-main.main-wrapper > .container.margin-vert--lg,
+html.plugin-pages .theme-layout-main.main-wrapper:not(.home-page-wrapper):not(.services-page-wrapper):not(.pricing-page-wrapper)
+  > .container.margin-vert--lg {
   margin-top: 0;
 }
 
@@ -253,7 +256,8 @@ html.blog-wrapper .theme-layout-main.main-wrapper > .container.margin-vert--lg {
 }
 
 @media screen and (max-width: 996px) {
-  html.blog-wrapper .theme-layout-main.main-wrapper {
+  html.blog-wrapper .theme-layout-main.main-wrapper,
+  html.plugin-pages .theme-layout-main.main-wrapper:not(.home-page-wrapper):not(.services-page-wrapper):not(.pricing-page-wrapper) {
     padding-top: 7.2rem;
   }
 
@@ -277,7 +281,8 @@ html.blog-wrapper .theme-layout-main.main-wrapper > .container.margin-vert--lg {
 }
 
 @media screen and (max-width: 760px) {
-  html.blog-wrapper .theme-layout-main.main-wrapper {
+  html.blog-wrapper .theme-layout-main.main-wrapper,
+  html.plugin-pages .theme-layout-main.main-wrapper:not(.home-page-wrapper):not(.services-page-wrapper):not(.pricing-page-wrapper) {
     padding-top: 6.8rem;
   }
 }
