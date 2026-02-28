@@ -11,8 +11,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'voix',
-  tagline: 'Documentation migration to open-source stacks without lock-in.',
-  favicon: 'img/favicon.ico',
+  tagline: 'Give your work a voice, not a license fee.',
+  favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -48,10 +48,6 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -59,14 +55,15 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -94,12 +91,12 @@ const config = {
           {to: '/services', label: 'Services', position: 'left'},
           {to: '/pricing', label: 'Pricing', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'mailto:hello@voix.studio',
-            label: 'Contact',
-            position: 'right',
-          },
         ],
+      },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
       },
       footer: {
         style: 'light',
@@ -140,10 +137,6 @@ const config = {
             title: 'Legal',
             items: [
               {
-                label: 'Imprint',
-                to: '/imprint',
-              },
-              {
                 label: 'Terms and conditions',
                 to: '/terms',
               },
@@ -154,7 +147,12 @@ const config = {
             ],
           },
         ],
-        copyright: '© 2026 voix. All rights reserved.',
+        logo: {
+          alt: 'voix logo',
+          src: 'img/logo.svg',
+          href: '/',
+        },
+        copyright: `© ${new Date().getFullYear()} voix. All rights reserved.`,
       },
       prism: {
         theme: prismThemes.github,

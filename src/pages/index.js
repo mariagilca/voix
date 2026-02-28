@@ -183,13 +183,21 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </header>
-
-        <section className={styles.mediaHeadingSection}>
-          <div className="container">
-            <Heading as="h2" className={styles.mediaHeading}>
-              Narrative-first documentation migration that teams actually adopt.
-            </Heading>
+          <Heading as="h1" className={styles.heroTitle}>
+            Your work deserves a portfolio that sounds like you.
+          </Heading>
+          <p className={styles.heroSubtitle}>
+            Launch a credible, fast, and elegant portfolio without wrestling
+            with templates. Get design, writing, and publishing in days, then
+            keep it updated with an annual care plan. No license fees, ever.
+          </p>
+          <div className={styles.heroActions}>
+            <Link className={styles.buttonPrimary} to="mailto:hello@voix.studio">
+              Start a project
+            </Link>
+            <Link className={styles.buttonGhost} to="#pricing">
+              See pricing
+            </Link>
           </div>
         </section>
 
@@ -367,20 +375,15 @@ export default function Home() {
               <div className={styles.ctaCard}>
                 <div>
                   <Heading as="h2" className={styles.ctaTitle}>
-                    Build AI-powered documentation operations that drive action.
+                    Ready to launch a portfolio with voix?
                   </Heading>
                   <p className={styles.ctaSubtitle}>
                     Share your current stack and we will send a practical migration plan with rollout milestones.
                   </p>
                 </div>
-                <div className={styles.ctaButtons}>
-                  <Link className={styles.buttonPrimary} to="mailto:hello@voix.studio">
-                    Book kickoff
-                  </Link>
-                  <Link className={styles.buttonSecondaryLight} to="/pricing">
-                    See pricing
-                  </Link>
-                </div>
+                <Link className={styles.buttonPrimary} to="mailto:mariag@voix.md">
+                  Book a kickoff
+                </Link>
               </div>
             </div>
           </section>

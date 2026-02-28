@@ -385,10 +385,8 @@
   line-height: 1.6;
 }
 
-.featureList {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+
+.pricingGrid {
   display: grid;
   gap: 0.56rem;
 }
