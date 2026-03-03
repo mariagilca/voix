@@ -185,9 +185,9 @@ training so the operating model is stable before full cutover.</p>]]></content:e
 <p>How long should my reel be? One to two minutes. Quality beats quantity. If the audio is bad, cut it.</p>
 <p>Do I need a printed portfolio? Yes. Digital gets you the audition. Print is for the room. Bring a headshot and resume stapled together.</p>
 <p>How often should I update? Every six months. Or immediately after you finish a major project.</p>]]></content:encoded>
-            <category>Portfolio</category>
-            <category>Acting</category>
-            <category>Process</category>
+            <category>portfolio</category>
+            <category>acting</category>
+            <category>process</category>
         </item>
         <item>
             <title><![CDATA[A practical docs migration playbook]]></title>
@@ -228,8 +228,8 @@ content current without a long queue or another subscription.</p>
 <li class="">Lightweight design tweaks</li>
 </ul>
 <p>You keep control of the repo, and we keep your voice consistent.</p>]]></content:encoded>
-            <category>Maintenance</category>
-            <category>Portfolio</category>
+            <category>maintenance</category>
+            <category>portfolio</category>
         </item>
         <item>
             <title><![CDATA[The six beats of a strong case study]]></title>
@@ -250,8 +250,8 @@ reads quickly and still feels human.</p>
 <li class="">The takeaway</li>
 </ol>
 <p>Keep each beat to 1-3 sentences. Add one metric or quote if you have it.</p>]]></content:encoded>
-            <category>Portfolio</category>
-            <category>Process</category>
+            <category>portfolio</category>
+            <category>process</category>
         </item>
         <item>
             <title><![CDATA[The no-license portfolio stack]]></title>
@@ -272,8 +272,8 @@ updates. Hosting on GitHub Pages is free, and custom domains are billed at
 cost.</p>
 <p>This structure keeps your portfolio lean, predictable, and fully in your
 control.</p>]]></content:encoded>
-            <category>Pricing</category>
-            <category>Process</category>
+            <category>pricing</category>
+            <category>process</category>
         </item>
         <item>
             <title><![CDATA[Why voice matters more than a template]]></title>
@@ -289,8 +289,8 @@ how to work with you. That clarity is the difference between a skim and a
 reply.</p>
 <p>We start with a one-line promise, build a short narrative around it, and use
 case studies to prove it. Design supports the story, not the other way around.</p>]]></content:encoded>
-            <category>Voice</category>
-            <category>Portfolio</category>
+            <category>voice</category>
+            <category>portfolio</category>
         </item>
         <item>
             <title><![CDATA[Information architecture for products that keep growing]]></title>

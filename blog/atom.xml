@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://voix.md/blog"/>
     <subtitle>voix Blog</subtitle>
-    <icon>https://voix.md/img/favicon.svg</icon>
+    <icon>https://voix.md/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Why documentation is a product, not a checklist]]></title>
         <id>https://voix.md/blog/importance-of-documentation</id>
@@ -196,9 +196,9 @@ training so the operating model is stable before full cutover.</p>]]></content>
             <name>Voix Studio</name>
             <uri>https://voix.studio</uri>
         </author>
-        <category label="Portfolio" term="Portfolio"/>
-        <category label="Acting" term="Acting"/>
-        <category label="Process" term="Process"/>
+        <category label="portfolio" term="portfolio"/>
+        <category label="acting" term="acting"/>
+        <category label="process" term="process"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[A practical docs migration playbook]]></title>
@@ -247,8 +247,8 @@ content current without a long queue or another subscription.</p>
             <name>Voix Studio</name>
             <uri>https://voix.studio</uri>
         </author>
-        <category label="Maintenance" term="Maintenance"/>
-        <category label="Portfolio" term="Portfolio"/>
+        <category label="maintenance" term="maintenance"/>
+        <category label="portfolio" term="portfolio"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[The six beats of a strong case study]]></title>
@@ -273,8 +273,8 @@ reads quickly and still feels human.</p>
             <name>Voix Studio</name>
             <uri>https://voix.studio</uri>
         </author>
-        <category label="Portfolio" term="Portfolio"/>
-        <category label="Process" term="Process"/>
+        <category label="portfolio" term="portfolio"/>
+        <category label="process" term="process"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[The no-license portfolio stack]]></title>
@@ -299,8 +299,8 @@ control.</p>]]></content>
             <name>Voix Studio</name>
             <uri>https://voix.studio</uri>
         </author>
-        <category label="Pricing" term="Pricing"/>
-        <category label="Process" term="Process"/>
+        <category label="pricing" term="pricing"/>
+        <category label="process" term="process"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Why voice matters more than a template]]></title>
@@ -320,8 +320,8 @@ case studies to prove it. Design supports the story, not the other way around.</
             <name>Voix Studio</name>
             <uri>https://voix.studio</uri>
         </author>
-        <category label="Voice" term="Voice"/>
-        <category label="Portfolio" term="Portfolio"/>
+        <category label="voice" term="voice"/>
+        <category label="portfolio" term="portfolio"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Information architecture for products that keep growing]]></title>
