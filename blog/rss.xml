@@ -48,7 +48,7 @@ portals that do not sync.</p>
 <p>The challenge is no longer just writing content. The challenge is delivering
 accurate knowledge, securely and at scale, to users, support teams, and AI
 systems.</p>
-<p>At Voix, we design documentation platforms that turn static files into governed,
+<p>At voix, we design documentation platforms that turn static files into governed,
 AI-ready knowledge systems.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-build-a-single-source-of-truth">1. Build a single source of truth<a href="https://voix.md/blog/is-your-docs-strategy-ready-for-ai#1-build-a-single-source-of-truth" class="hash-link" aria-label="Direct link to 1. Build a single source of truth" title="Direct link to 1. Build a single source of truth" translate="no">​</a></h2>
 <p>When docs live in multiple tools, version drift is guaranteed. One portal
@@ -134,7 +134,7 @@ training so the operating model is stable before full cutover.</p>]]></content:e
 <ol>
 <li class="">Gather your materials. Get professional headshots, a clean resume, and a sharp showreel.</li>
 <li class="">Write a clear bio. State your training and your type. Be honest.</li>
-<li class="">Build on solid ground. Use open-source tools like Voix. Pay once. Own the code.</li>
+<li class="">Build on solid ground. Use open-source tools like voix. Pay once. Own the code.</li>
 <li class="">Add social proof. Display reviews, awards, and press.</li>
 <li class="">Stay current. Update your look and your credits regularly.</li>
 </ol>
@@ -158,7 +158,7 @@ training so the operating model is stable before full cutover.</p>]]></content:e
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-design-and-own-your-platform">3. Design and own your platform<a href="https://voix.md/blog/acting-portfolio-gets-you-cast#3-design-and-own-your-platform" class="hash-link" aria-label="Direct link to 3. Design and own your platform" title="Direct link to 3. Design and own your platform" translate="no">​</a></h3>
 <p>Most portfolio builders rent you space. They charge you every month to keep your site alive.</p>
 <p>Don't rent. Own.</p>
-<p>Use an open-source builder like Voix. You pay a single fee for the build. The code belongs to you. The only recurring cost is the domain name (the .com), which you pay directly to the registrar.</p>
+<p>Use an open-source builder like voix. You pay a single fee for the build. The code belongs to you. The only recurring cost is the domain name (the .com), which you pay directly to the registrar.</p>
 <p>Your site needs these pages:</p>
 <ul>
 <li class="">Home/About: Your face and your bio.</li>
@@ -258,8 +258,8 @@ reads quickly and still feels human.</p>
             <link>https://voix.md/blog/no-license-portfolio-stack</link>
             <guid>https://voix.md/blog/no-license-portfolio-stack</guid>
             <pubDate>Thu, 29 May 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Voix sites are built on an open-source stack, which means you never pay]]></description>
-            <content:encoded><![CDATA[<p>Voix sites are built on an open-source stack, which means you never pay
+            <description><![CDATA[voix sites are built on an open-source stack, which means you never pay]]></description>
+            <content:encoded><![CDATA[<p>voix sites are built on an open-source stack, which means you never pay
 software license fees to keep your portfolio live.</p>
 <p>Here is what that means in practice:</p>
 <ul>
@@ -282,7 +282,7 @@ control.</p>]]></content:encoded>
             <pubDate>Wed, 28 May 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[A portfolio should sound like you, not like the last template you downloaded.]]></description>
             <content:encoded><![CDATA[<p>A portfolio should sound like you, not like the last template you downloaded.
-At Voix, the goal is simple: shape the story first, then design the site
+At voix, the goal is simple: shape the story first, then design the site
 around it.</p>
 <p>When your voice is clear, clients understand what you do, why it matters, and
 how to work with you. That clarity is the difference between a skim and a
