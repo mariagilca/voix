@@ -242,8 +242,8 @@
 .mediaHeading {
   margin: 0;
   text-align: center;
-  font-size: clamp(1.2rem, 2.6vw, 1.95rem);
-  line-height: 1.2;
+  font-size: clamp(1.95rem, 3.5vw, 3rem);
+  line-height: 1.08;
   letter-spacing: -0.02em;
   background: linear-gradient(96deg, #111827 56%, #2142e7 92%);
   -webkit-background-clip: text;
@@ -782,13 +782,31 @@
 :global([data-theme='dark']) .bentoItem p,
 :global([data-theme='dark']) .metricsCard p,
 :global([data-theme='dark']) .quoteMeta {
-  color: #94a3b8;
+  color: #a8b5c8;
 }
 
 :global([data-theme='dark']) .featureList li,
 :global([data-theme='dark']) .progressiveLine,
 :global([data-theme='dark']) .useCaseMetricBox span {
   color: #e2e8f0;
+}
+
+:global([data-theme='dark']) .kicker {
+  color: #a5b8ff;
+}
+
+:global([data-theme='dark']) .logoHeadline,
+:global([data-theme='dark']) .useCaseLabel,
+:global([data-theme='dark']) .bentoKicker {
+  color: #c7d2e1;
+}
+
+:global([data-theme='dark']) .quoteText {
+  color: #f8fafc;
+}
+
+:global([data-theme='dark']) .dot {
+  background: rgba(148, 163, 184, 0.46);
 }
 
 :global([data-theme='dark']) .buttonSecondary,
@@ -802,6 +820,14 @@
   background: rgba(30, 41, 59, 0.85);
   border-color: rgba(148, 163, 184, 0.32);
   color: #dbe3ef;
+}
+
+:global([data-theme='dark']) .shimmerNumber,
+:global([data-theme='dark']) .inlineStrong {
+  background: linear-gradient(93deg, #f8fafc 10%, #c7d2fe 64%, #7dd3fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 :global([data-theme='dark']) .metricValue,

@@ -16,7 +16,7 @@ const includedItems = [
 export default function PricingPage() {
   return (
     <Layout
-      title="Pricing | Voix"
+      title="Pricing | voix"
       description="Documentation migration pricing focused on ownership, employee onboarding, and CI/CD delivery."
       wrapperClassName="pricing-page-wrapper">
       <div className={styles.page}>

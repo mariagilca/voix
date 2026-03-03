@@ -6,7 +6,7 @@ tags: [voice, portfolio]
 ---
 
 A portfolio should sound like you, not like the last template you downloaded.
-At Voix, the goal is simple: shape the story first, then design the site
+At voix, the goal is simple: shape the story first, then design the site
 around it.
 
 <!-- truncate -->

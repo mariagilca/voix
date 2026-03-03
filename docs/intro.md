@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Studio Guide
 
-Voix exists to give your work a clear, confident voice. We build portfolio
+voix exists to give your work a clear, confident voice. We build portfolio
 sites that feel personal, publish fast, and never require software licenses.
 
 ## What you need to start

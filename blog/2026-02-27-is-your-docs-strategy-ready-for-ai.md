@@ -15,7 +15,7 @@ The challenge is no longer just writing content. The challenge is delivering
 accurate knowledge, securely and at scale, to users, support teams, and AI
 systems.
 
-At Voix, we design documentation platforms that turn static files into governed,
+At voix, we design documentation platforms that turn static files into governed,
 AI-ready knowledge systems.
 
 ## 1. Build a single source of truth

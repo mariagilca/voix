@@ -38,7 +38,9 @@ body {
 
 html[data-theme='dark'],
 html[data-theme='dark'] body {
-  background: #fff;
+  background:
+    radial-gradient(circle at 12% -20%, rgba(53, 86, 255, 0.22), transparent 42%),
+    linear-gradient(180deg, #050914 0%, #0a1324 100%);
 }
 
 #__docusaurus {
@@ -192,7 +194,8 @@ html.plugin-pages .theme-layout-main.main-wrapper:not(.home-page-wrapper):not(.s
 }
 
 [data-theme='dark'] .theme-layout-main.main-wrapper {
-  background: rgba(13, 20, 36, 0.84);
+  background: rgba(10, 16, 30, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.16);
   box-shadow: 0 22px 48px rgba(2, 6, 23, 0.55);
 }
 

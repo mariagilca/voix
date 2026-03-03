@@ -5,11 +5,11 @@ slug: /imprint
 
 # Imprint
 
-Provider information for Voix.
+Provider information for voix.
 
 ## Responsible for content
 
-Voix  
+voix  
 Maria Gilca  
 Email: [mariag@voix.md](mailto:mariag@voix.md)
 
