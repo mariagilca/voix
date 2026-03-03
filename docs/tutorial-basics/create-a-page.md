@@ -7,7 +7,7 @@ sidebar_position: 1
 A portfolio feels effortless when the structure is tight. We keep the
 navigation small and the flow intentional.
 
-## The default Voix layout
+## The default voix layout
 
 - Home: narrative and highlights
 - Work: case studies and outcomes

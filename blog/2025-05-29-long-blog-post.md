@@ -5,7 +5,7 @@ authors: [voix]
 tags: [pricing, process]
 ---
 
-Voix sites are built on an open-source stack, which means you never pay
+voix sites are built on an open-source stack, which means you never pay
 software license fees to keep your portfolio live.
 
 <!-- truncate -->

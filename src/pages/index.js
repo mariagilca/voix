@@ -90,25 +90,25 @@ const bentoCards = [
   },
 ];
 
-const integrations = [
-  'GitHub',
-  'GitLab',
-  'Linear',
-  'Jira',
-  'Slack',
-  'Notion',
-  'HubSpot',
-  'Segment',
-  'Google Analytics',
-  'PostHog',
-  'Intercom',
-  'Zendesk',
+const deliveryScope = [
+  'Content audit and migration map',
+  'Information architecture redesign',
+  'Docusaurus implementation',
+  'Versioning and release workflow',
+  'CI/CD publishing setup',
+  'Search and navigation optimization',
+  'Authoring standards and templates',
+  'Contributor onboarding and training',
+  'Governance and ownership model',
+  'QA, redirects, and link checks',
+  'Launch support and handoff playbook',
+  'Post-launch iteration plan',
 ];
 
 const testimonials = [
   {
     quote:
-      'Voix gave us an operating model, not just a migration. Our docs finally match how our product ships.',
+      'voix gave us an operating model, not just a migration. Our docs finally match how our product ships.',
     name: 'Nora Chen',
     role: 'Head of Product Marketing',
     stat: '2x',
@@ -154,8 +154,8 @@ export default function Home() {
 
   return (
     <Layout
-      title="Voix | Documentation Migration"
-      description="Arcade-inspired homepage for Voix documentation migration services."
+      title="voix | Documentation Migration"
+      description="Homepage for voix documentation migration services."
       wrapperClassName={`${styles.homeWrapper} home-page-wrapper`}>
       <div className={styles.page}>
         <AnimatedGradientCanvas className={styles.animatedGradient} />
@@ -163,12 +163,12 @@ export default function Home() {
           <div className={styles.heroGradientA} aria-hidden="true" />
           <div className={styles.heroGradientB} aria-hidden="true" />
           <div className="container">
-            <div className={styles.announcement}>Documentation-first studio. Arcade-grade homepage language.</div>
+            <div className={styles.announcement}>The shortest path from "what is this?" to "I want this."</div>
             <div className={styles.heroGrid}>
               <div className={styles.heroCopy}>
                 <p className={styles.kicker}>Open-source documentation migration</p>
                 <Heading as="h1" className={styles.heroTitle}>
-                  Bring your documentation story to life in minutes, <span>on a platform you own.</span>
+                  Escape vendor lock-in fast, <span>and launch docs on a stack you control.</span>
                 </Heading>
                 <p className={styles.heroSubtitle}>
                   {siteConfig.title} migrates teams from locked platforms to open-source documentation stacks they
@@ -217,10 +217,10 @@ export default function Home() {
             <div className="container">
               <div className={styles.sectionHeadCenter}>
                 <Heading as="h2" className={styles.sectionTitle}>
-                  Not a generic AI migration script.
+                  Built for real documentation migrations.
                 </Heading>
                 <p className={styles.sectionSubtitle}>
-                  Arcade-inspired interaction, adapted for documentation operations and long-term ownership.
+                  Purpose-built workflows for documentation operations and long-term ownership.
                 </p>
               </div>
 
@@ -310,14 +310,14 @@ export default function Home() {
             <div className="container">
               <div className={styles.integrationsShell}>
                 <Heading as="h2" className={styles.integrationsTitle}>
-                  Integrated with the tools your teams already rely on.
+                  What we did, and what we do for documentation teams.
                 </Heading>
                 <p className={styles.integrationsSubtitle}>
-                  Connect publishing, analytics, support workflows, and planning tools without changing your
-                  operating model.
+                  We migrate, restructure, and operationalize your docs so your team owns a reliable open-source
+                  system after launch.
                 </p>
                 <div className={styles.integrationGrid}>
-                  {integrations.map((item) => (
+                  {deliveryScope.map((item) => (
                     <span key={item} className={styles.integrationItem}>
                       {item}
                     </span>
@@ -333,7 +333,7 @@ export default function Home() {
                 <Heading as="h2" className={styles.sectionTitle}>
                   You’re in great company.
                 </Heading>
-                <p className={styles.sectionSubtitle}>How teams use Voix to ship clearer documentation outcomes.</p>
+                <p className={styles.sectionSubtitle}>How teams use voix to ship clearer documentation outcomes.</p>
               </div>
 
               <div className={styles.testimonialLayout}>

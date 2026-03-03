@@ -30,8 +30,8 @@ const coreOffers = [
 export default function ServicesPage() {
   return (
     <Layout
-      title="Services | Voix"
-      description="Voix offers documentation consolidation, implementation, team onboarding, and CI/CD delivery for modern owned platforms."
+      title="Services | voix"
+      description="voix offers documentation consolidation, implementation, team onboarding, and CI/CD delivery for modern owned platforms."
       wrapperClassName="services-page-wrapper">
       <div className={styles.page}>
         <AnimatedGradientCanvas className={styles.animatedGradient} />

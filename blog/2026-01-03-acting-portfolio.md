@@ -21,7 +21,7 @@ Whether you are a student or a working professional, this is how you set yoursel
 
 1. Gather your materials. Get professional headshots, a clean resume, and a sharp showreel.
 2. Write a clear bio. State your training and your type. Be honest.
-3. Build on solid ground. Use open-source tools like Voix. Pay once. Own the code.
+3. Build on solid ground. Use open-source tools like voix. Pay once. Own the code.
 4. Add social proof. Display reviews, awards, and press.
 5. Stay current. Update your look and your credits regularly.
 
@@ -54,7 +54,7 @@ Most portfolio builders rent you space. They charge you every month to keep your
 
 Don't rent. Own.
 
-Use an open-source builder like Voix. You pay a single fee for the build. The code belongs to you. The only recurring cost is the domain name (the .com), which you pay directly to the registrar.
+Use an open-source builder like voix. You pay a single fee for the build. The code belongs to you. The only recurring cost is the domain name (the .com), which you pay directly to the registrar.
 
 Your site needs these pages:
 

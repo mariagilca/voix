@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Publish without license fees
 
-Voix portfolios run on an open-source stack, which means no per-seat or
+voix portfolios run on an open-source stack, which means no per-seat or
 software license costs to keep your site live.
 
 ## GitHub Pages (default)
