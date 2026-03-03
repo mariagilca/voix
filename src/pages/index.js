@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import AnimatedGradientCanvas from '../components/AnimatedGradientCanvas';
 import styles from './index.module.css';
 
 const marqueeItems = [
@@ -157,6 +158,7 @@ export default function Home() {
       description="Arcade-inspired homepage for Voix documentation migration services."
       wrapperClassName={`${styles.homeWrapper} home-page-wrapper`}>
       <div className={styles.page}>
+        <AnimatedGradientCanvas className={styles.animatedGradient} />
         <header className={styles.hero}>
           <div className={styles.heroGradientA} aria-hidden="true" />
           <div className={styles.heroGradientB} aria-hidden="true" />
@@ -166,11 +168,11 @@ export default function Home() {
               <div className={styles.heroCopy}>
                 <p className={styles.kicker}>Open-source documentation migration</p>
                 <Heading as="h1" className={styles.heroTitle}>
-                  Bring your documentation story <span>to life in minutes.</span>
+                  Bring your documentation story to life in minutes, <span>on a platform you own.</span>
                 </Heading>
                 <p className={styles.heroSubtitle}>
-                  {siteConfig.title} helps teams move from locked platforms to documentation systems they own.
-                  We consolidate content, rebuild structure, train contributors, and ship CI/CD publishing.
+                  {siteConfig.title} migrates teams from locked platforms to open-source documentation stacks they
+                  control. We consolidate content, rebuild structure, train contributors, and launch CI/CD publishing.
                 </p>
                 <div className={styles.actions}>
                   <Link className={styles.buttonPrimary} to="mailto:mariag@voix.com">

@@ -7,12 +7,25 @@
 }
 
 .page {
+  position: relative;
+  isolation: isolate;
   color: var(--svc-ink);
   font-family: 'Inter', 'Segoe UI', sans-serif;
-  background:
-    radial-gradient(circle at 12% -10%, rgba(33, 66, 231, 0.2), transparent 36%),
-    radial-gradient(circle at 88% 10%, rgba(16, 185, 129, 0.14), transparent 40%),
-    linear-gradient(180deg, #f9fbff 0%, #f4f7ff 45%, #ffffff 100%);
+  background: transparent;
+}
+
+.animatedGradient {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.page > header,
+.page > main {
+  position: relative;
+  z-index: 1;
 }
 
 .hero {
@@ -273,10 +286,7 @@
 }
 
 :global([data-theme='dark']) .page {
-  background:
-    radial-gradient(circle at 12% -10%, rgba(51, 92, 255, 0.2), transparent 36%),
-    radial-gradient(circle at 88% 10%, rgba(45, 212, 191, 0.12), transparent 40%),
-    linear-gradient(180deg, #030712 0%, #0b1220 42%, #0f172a 100%);
+  background: transparent;
   color: #e5e7eb;
 }
 

@@ -1,6 +1,7 @@
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import AnimatedGradientCanvas from '../components/AnimatedGradientCanvas';
 import styles from './pricing.module.css';
 
 const includedItems = [
@@ -19,6 +20,7 @@ export default function PricingPage() {
       description="Documentation migration pricing focused on ownership, employee onboarding, and CI/CD delivery."
       wrapperClassName="pricing-page-wrapper">
       <div className={styles.page}>
+        <AnimatedGradientCanvas className={styles.animatedGradient} />
         <header className={styles.hero}>
           <div className={styles.heroGlowA} aria-hidden="true" />
           <div className={styles.heroGlowB} aria-hidden="true" />
