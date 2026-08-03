@@ -1,6 +1,19 @@
+# image_url is absolute: Docusaurus copies it straight into the BlogPosting
+# JSON-LD, and a root-relative path is not a resolvable URL in structured data.
+
 voix:
-  name: voix Studio
-  title: Portfolio studio
-  url: https://voix.studio
-  image_url: /img/logo.svg
+  name: voix
+  title: Documentation migration studio
+  url: https://www.voix.md/about/
+  image_url: https://www.voix.md/img/logo.svg
+  page: true
+
+maria:
+  name: Maria Gilca
+  title: Documentation architect
+  description: >-
+    Documentation architect and founder of voix. Writes about migrating product
+    documentation off proprietary platforms onto stacks teams own.
+  url: https://www.voix.md/about/
+  image_url: https://www.voix.md/img/logo.svg
   page: true

@@ -3,6 +3,13 @@ slug: voice-first-portfolios
 title: Why voice matters more than a template
 authors: [voix]
 tags: [voice, portfolio]
+description: Portfolio-era advice on shaping the story before the site, so a portfolio sounds like its owner rather than the template it was built from.
+keywords:
+  - portfolio voice
+  - personal brand story
+  - portfolio narrative
+  - case studies
+  - portfolio design
 ---
 
 A portfolio should sound like you, not like the last template you downloaded.

@@ -1,397 +1,684 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * voix design system
+ * ------------------
+ * Warm editorial direction: ivory paper, ink text, a single clay accent, and
+ * hairline rules instead of shadows. Type does the work, not decoration.
+ *
+ * Typefaces are chosen from the subject's own world:
+ *   Source Serif 4  - a screen-reading serif built for long-form documentation
+ *   Hanken Grotesk  - warm neo-grotesque for UI and body copy
+ *   IBM Plex Mono   - the engineering register: slugs, diffs, labels, metrics
+ *
+ * Accent rules worth keeping:
+ *   --clay      is for fills, marks and rules. It is 2.96:1 on ivory, so it is
+ *               never used for text.
+ *   --clay-deep is the interactive colour. 4.97:1 on ivory as text, 5.23:1 with
+ *               white text on top. Use it for links and primary buttons.
  */
 
-/* You can override the default Infima variables here. */
+/* ---------------------------------------------------------------- tokens -- */
+
 :root {
-  --site-shell-gap: 15px;
-  --site-shell-radius: 10px;
-  --ifm-color-primary: #2142e7;
-  --ifm-color-primary-dark: #1e3bd0;
-  --ifm-color-primary-darker: #1c38c5;
-  --ifm-color-primary-darkest: #172ea2;
-  --ifm-color-primary-light: #2a4cf3;
-  --ifm-color-primary-lighter: #3556ff;
-  --ifm-color-primary-lightest: #5f77ff;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* surfaces */
+  --voix-ivory: #faf9f5;
+  --voix-paper: #f0eee6;
+  --voix-card: #ffffff;
+  --voix-sunk: #f5f3ec;
+
+  /* ink */
+  --voix-ink: #191919;
+  --voix-ink-2: #5c5a54;
+  --voix-ink-3: #6e6a60;
+  --voix-ink-inverse: #faf9f5;
+
+  /* accent */
+  --voix-clay: #d97757;
+  --voix-clay-deep: #af5031;
+  --voix-clay-hover: #98442a;
+  --voix-on-clay: #ffffff;
+  --voix-clay-wash: #f7ece6;
+  --voix-kraft: #d4a27f;
+  --voix-kraft-wash: #f6efe6;
+
+  /* diff colours, borrowed from the tooling this studio lives in */
+  --voix-minus: #a8443a;
+  --voix-minus-wash: #f8ebe8;
+  --voix-plus: #3f6b52;
+  --voix-plus-wash: #e9f1ec;
+
+  /* lines */
+  --voix-rule: #e5e1d8;
+  --voix-rule-strong: #d5cfc1;
+
+  /* type */
+  --voix-font-display: 'Source Serif 4', 'Iowan Old Style', 'Palatino Linotype',
+    Georgia, serif;
+  --voix-font-body: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --voix-font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono',
+    Menlo, Consolas, monospace;
+
+  --voix-display-1: clamp(2.6rem, 1.55rem + 3.7vw, 4.6rem);
+  --voix-display-2: clamp(2rem, 1.42rem + 2.05vw, 3rem);
+  --voix-display-3: clamp(1.5rem, 1.28rem + 0.78vw, 1.95rem);
+  --voix-title: clamp(1.22rem, 1.12rem + 0.36vw, 1.42rem);
+  --voix-body-lg: clamp(1.06rem, 1.01rem + 0.22vw, 1.2rem);
+  --voix-body: 1rem;
+  --voix-small: 0.875rem;
+  --voix-micro: 0.75rem;
+
+  /* space */
+  --voix-s1: 0.25rem;
+  --voix-s2: 0.5rem;
+  --voix-s3: 0.75rem;
+  --voix-s4: 1rem;
+  --voix-s5: 1.5rem;
+  --voix-s6: 2rem;
+  --voix-s7: 3rem;
+  --voix-s8: 4rem;
+  --voix-s9: 6rem;
+  --voix-section: clamp(3.75rem, 1.5rem + 7vw, 7rem);
+
+  /* geometry */
+  --voix-r-sm: 6px;
+  --voix-r-md: 10px;
+  --voix-r-lg: 14px;
+  --voix-content: 1180px;
+  --voix-measure: 68ch;
+  --voix-narrow: 46rem;
+
+  /* the only shadow in the system; everything else uses a hairline */
+  --voix-lift: 0 1px 2px rgba(25, 25, 25, 0.04),
+    0 12px 28px -20px rgba(25, 25, 25, 0.22);
+
+  --voix-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* ---- Infima bindings ---- */
+  --ifm-color-primary: #af5031;
+  --ifm-color-primary-dark: #9e482c;
+  --ifm-color-primary-darker: #954429;
+  --ifm-color-primary-darkest: #7b3822;
+  --ifm-color-primary-light: #c05836;
+  --ifm-color-primary-lighter: #c95f3d;
+  --ifm-color-primary-lightest: #d97757;
+
+  --ifm-background-color: var(--voix-ivory);
+  --ifm-background-surface-color: var(--voix-card);
+  --ifm-font-color-base: var(--voix-ink);
+  --ifm-heading-color: var(--voix-ink);
+  --ifm-link-color: var(--voix-clay-deep);
+  --ifm-link-hover-color: var(--voix-ink);
+
+  --ifm-font-family-base: var(--voix-font-body);
+  --ifm-heading-font-family: var(--voix-font-display);
+  --ifm-font-family-monospace: var(--voix-font-mono);
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.7;
+  --ifm-heading-font-weight: 600;
+  --ifm-h1-font-size: var(--voix-display-2);
+  --ifm-h2-font-size: var(--voix-display-3);
+  --ifm-h3-font-size: var(--voix-title);
+  --ifm-heading-margin-top: 2.25rem;
+  --ifm-heading-margin-bottom: 0.85rem;
+
+  --ifm-global-radius: var(--voix-r-sm);
+  --ifm-container-width-xl: var(--voix-content);
+  --ifm-hr-border-color: var(--voix-rule);
+  --ifm-hr-border-width: 1px;
+  --ifm-toc-border-color: var(--voix-rule);
+  --ifm-table-border-color: var(--voix-rule);
+  --ifm-table-stripe-background: var(--voix-sunk);
+  --ifm-table-head-background: transparent;
+  --ifm-blockquote-color: var(--voix-ink-2);
+  --ifm-blockquote-border-color: var(--voix-clay);
+
+  --ifm-code-font-size: 0.86em;
+  --ifm-code-background: var(--voix-paper);
+  --ifm-code-padding-horizontal: 0.36em;
+  --ifm-code-padding-vertical: 0.16em;
+  /* --ifm-pre-background is deliberately not overridden: the Prism theme owns
+     the code-block surface, and forcing a different background here left the
+     light theme's syntax colours sitting on a dark panel. */
+
+  --ifm-navbar-height: 68px;
+  --ifm-navbar-background-color: transparent;
+  --ifm-navbar-shadow: none;
+  --ifm-navbar-padding-vertical: 0;
+  --ifm-navbar-link-color: var(--voix-ink);
+  --ifm-navbar-link-hover-color: var(--voix-clay-deep);
+
+  --ifm-footer-background-color: var(--voix-paper);
+  --ifm-footer-color: var(--voix-ink-2);
+  --ifm-footer-link-color: var(--voix-ink-2);
+  --ifm-footer-link-hover-color: var(--voix-clay-deep);
+  --ifm-footer-title-color: var(--voix-ink);
+
+  --ifm-menu-color: var(--voix-ink-2);
+  --ifm-menu-color-active: var(--voix-clay-deep);
+  --ifm-menu-color-background-active: var(--voix-clay-wash);
+  --ifm-menu-color-background-hover: var(--voix-sunk);
+
+  --ifm-breadcrumb-color-active: var(--voix-clay-deep);
+  --ifm-breadcrumb-item-background-active: var(--voix-clay-wash);
+  --ifm-breadcrumb-separator-size-multiplier: 1;
+
+  --ifm-alert-border-radius: var(--voix-r-md);
+  --ifm-alert-border-width: 1px;
+  --ifm-alert-border-left-width: 3px;
+  --ifm-alert-shadow: none;
+
+  --docusaurus-highlighted-code-line-bg: rgba(217, 119, 87, 0.16);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #6d84ff;
-  --ifm-color-primary-dark: #5d76ff;
-  --ifm-color-primary-darker: #526cff;
-  --ifm-color-primary-darkest: #3550f5;
-  --ifm-color-primary-light: #7d92ff;
-  --ifm-color-primary-lighter: #879aff;
-  --ifm-color-primary-lightest: #a4b2ff;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --voix-ivory: #191817;
+  --voix-paper: #211f1d;
+  --voix-card: #24221f;
+  --voix-sunk: #1f1e1b;
+
+  --voix-ink: #f0eee6;
+  --voix-ink-2: #c0bbb0;
+  --voix-ink-3: #a29c90;
+  --voix-ink-inverse: #191817;
+
+  --voix-clay: #e08767;
+  --voix-clay-deep: #e08767;
+  /* On dark the accent is the light colour, so the pair inverts: a clay fill
+     carries dark text, and the hover state gets lighter rather than deeper. */
+  --voix-clay-hover: #e79880;
+  --voix-on-clay: #1a1210;
+  --voix-clay-wash: #33241e;
+  --voix-kraft: #d4a27f;
+  --voix-kraft-wash: #2c2620;
+
+  --voix-minus: #e0928a;
+  --voix-minus-wash: #2f2220;
+  --voix-plus: #8fc0a5;
+  --voix-plus-wash: #1e2823;
+
+  --voix-rule: #34312c;
+  --voix-rule-strong: #46423b;
+
+  --voix-lift: 0 1px 2px rgba(0, 0, 0, 0.4),
+    0 14px 32px -22px rgba(0, 0, 0, 0.8);
+
+  --ifm-color-primary: #e08767;
+  --ifm-color-primary-dark: #d97757;
+  --ifm-color-primary-darker: #d36c4a;
+  --ifm-color-primary-darkest: #b95637;
+  --ifm-color-primary-light: #e79880;
+  --ifm-color-primary-lighter: #eba28c;
+  --ifm-color-primary-lightest: #f2bfae;
+
+  --docusaurus-highlighted-code-line-bg: rgba(224, 135, 103, 0.18);
 }
+
+/* ------------------------------------------------------------------ base -- */
 
 html,
 body {
-  background: #fff;
-}
-
-html[data-theme='dark'],
-html[data-theme='dark'] body {
-  background:
-    radial-gradient(circle at 12% -20%, rgba(53, 86, 255, 0.22), transparent 42%),
-    linear-gradient(180deg, #050914 0%, #0a1324 100%);
+  background: var(--voix-ivory);
+  color: var(--voix-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant-numeric: tabular-nums lining-nums;
 }
 
 #__docusaurus {
   min-height: 100vh;
 }
 
-.theme-layout-main.main-wrapper {
-  margin: var(--site-shell-gap);
-  border-radius: var(--site-shell-radius);
-  background: rgba(255, 255, 255, 0.84);
-  box-shadow: 0 18px 42px rgba(17, 24, 39, 0.1);
-  overflow: hidden;
+/* Anchor targets have to clear the sticky navbar (68px) with a little air. */
+html {
+  scroll-padding-top: 5rem;
 }
 
-html.blog-wrapper .theme-layout-main.main-wrapper,
-html.plugin-pages .theme-layout-main.main-wrapper:not(.home-page-wrapper):not(.services-page-wrapper):not(.pricing-page-wrapper) {
-  padding-top: 8.8rem;
+h1,
+h2,
+h3 {
+  font-family: var(--voix-font-display);
+  letter-spacing: -0.018em;
+  text-wrap: balance;
 }
 
-html.blog-wrapper .theme-layout-main.main-wrapper > .container.margin-vert--lg,
-html.plugin-pages .theme-layout-main.main-wrapper:not(.home-page-wrapper):not(.services-page-wrapper):not(.pricing-page-wrapper)
-  > .container.margin-vert--lg {
-  margin-top: 0;
+h4,
+h5,
+h6 {
+  font-family: var(--voix-font-body);
+  font-weight: 600;
+  letter-spacing: -0.005em;
 }
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, currentColor 38%, transparent);
+}
+
+::selection {
+  background: var(--voix-clay);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--voix-clay-deep);
+  outline-offset: 2px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--voix-rule);
+  margin: var(--voix-s7) 0;
+}
+
+/* ---------------------------------------------------------------- navbar -- */
 
 .navbar {
-  background: transparent;
-  border-bottom: 0;
-  box-shadow: none;
-  padding-top: 1rem;
-  padding-bottom: 0.35rem;
-  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.navbar:not(.scrolling) {
-  padding-top: 0.7rem;
-  padding-bottom: 0.24rem;
-  background: transparent;
-}
-
-.navbar.navbar--fixed-top {
-  position: fixed;
-  top: var(--site-shell-gap);
-  left: var(--site-shell-gap);
-  right: var(--site-shell-gap);
+  position: sticky;
+  top: 0;
+  background: color-mix(in srgb, var(--voix-ivory) 88%, transparent);
+  -webkit-backdrop-filter: saturate(160%) blur(12px);
+  backdrop-filter: saturate(160%) blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s var(--voix-ease);
 }
 
 .navbar.scrolling {
-  background: transparent;
-  box-shadow: none;
+  border-bottom-color: var(--voix-rule);
 }
 
 .navbar__inner {
-  width: min(1600px, calc(100% - 4rem));
-  max-width: none;
+  width: min(var(--voix-content), calc(100% - 3rem));
   margin: 0 auto;
-  min-height: 86px;
-  padding: 0.62rem 1.2rem;
-  border-radius: 999px;
-  background: transparent;
-  box-shadow: none;
-  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.navbar:not(.scrolling) .navbar__inner {
-  background: transparent;
-  box-shadow: none;
-}
-
-.navbar.scrolling .navbar__inner {
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-  background: rgba(255, 255, 255, 0.74);
-  box-shadow:
-    0 0 0 1px rgba(17, 24, 39, 0.1),
-    0 2px 2px -1px rgba(17, 24, 39, 0.04),
-    0 8px 24px -12px rgba(17, 24, 39, 0.16);
+  padding: 0;
 }
 
 .navbar__brand {
-  border-radius: 999px;
-  padding: 0.42rem 0.72rem;
-  gap: 0.45rem;
-  transition: background-color 0.2s ease;
+  margin-right: var(--voix-s6);
+  gap: 0.55rem;
 }
 
-.navbar__brand:hover {
-  background: rgba(17, 24, 39, 0.05);
-}
-
-.navbar__title {
-  color: #111827;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  transition: color 0.2s ease;
-}
-
-.navbar__brand:hover .navbar__title {
-  background: linear-gradient(90deg, #111827 0%, #2a4cf3 60%, #03b5ed 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.navbar__logo img {
-  height: 34px;
+.navbar__logo img,
+.navbar__logo svg {
+  height: 26px;
   width: auto;
 }
 
+.navbar__title {
+  font-family: var(--voix-font-display);
+  font-size: 1.32rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--voix-ink);
+}
+
 .navbar__item.navbar__link {
-  color: #111827;
-  font-size: 1rem;
+  font-size: 0.94rem;
   font-weight: 500;
-  border-radius: 12px;
-  padding: 0.55rem 0.88rem;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  color: var(--voix-ink-2);
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--voix-r-sm);
+  transition: color 0.16s var(--voix-ease);
 }
 
-.navbar__item.navbar__link:hover,
-.navbar__item.navbar__link--active {
-  color: #111827;
+.navbar__item.navbar__link:hover {
+  color: var(--voix-ink);
   text-decoration: none;
-  background: rgba(17, 24, 39, 0.05);
 }
 
-.navbar__item.navbar__link[href^='mailto:'] {
-  border-radius: 999px;
-  background: #2f46d8;
-  color: #fff;
-  padding: 0.72rem 1.3rem;
-  box-shadow:
-    0 0 0 1px #1e35bc,
-    0 10px 18px rgba(47, 70, 216, 0.24);
-  margin-left: 0.55rem;
-  transform: translateY(0);
+.navbar__link--active {
+  color: var(--voix-ink);
 }
 
-.navbar__item.navbar__link[href^='mailto:']:hover {
-  background: #3a53ea;
-  color: #fff;
+/* The one navigation item that is an action rather than a destination. It has
+   to live here rather than in the kit because Docusaurus builds the navbar from
+   config, so it cannot render a kit <Button>. The tokens keep the two in step. */
+.navbar__item.navbar__link.navbar-cta {
+  background: var(--voix-clay-deep);
+  color: var(--voix-on-clay);
+  padding: 0.5rem 1.05rem;
+  border-radius: var(--voix-r-sm);
+  margin-left: 0.4rem;
+  font-weight: 500;
+  transition: background-color 0.16s var(--voix-ease);
 }
 
-.navbar__item.navbar__link[href^='mailto:'] svg {
-  display: none;
+.navbar__item.navbar__link.navbar-cta:hover {
+  background: var(--voix-clay-hover);
+  color: var(--voix-on-clay);
 }
 
-[data-theme='dark'] .navbar {
-  background: transparent;
-  border-bottom: 0;
+[data-theme='dark'] .navbar__item.navbar__link.navbar-cta {
+  background: var(--voix-clay);
+}
+
+.navbar__toggle,
+.navbar-sidebar__brand {
+  color: var(--voix-ink);
+}
+
+.navbar-sidebar {
+  background: var(--voix-ivory);
+}
+
+.navbar-sidebar__brand {
   box-shadow: none;
+  border-bottom: 1px solid var(--voix-rule);
 }
 
-[data-theme='dark'] .theme-layout-main.main-wrapper {
-  background: rgba(10, 16, 30, 0.9);
-  border: 1px solid rgba(148, 163, 184, 0.16);
-  box-shadow: 0 22px 48px rgba(2, 6, 23, 0.55);
+.clean-btn:hover {
+  background: var(--voix-sunk);
 }
 
-[data-theme='dark'] .navbar.scrolling {
-  background: transparent;
-  box-shadow: none;
-}
-
-[data-theme='dark'] .navbar.scrolling .navbar__inner {
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
-  background: rgba(10, 14, 25, 0.78);
-  box-shadow:
-    0 0 0 1px rgba(148, 163, 184, 0.2),
-    0 2px 2px -1px rgba(2, 6, 23, 0.4),
-    0 4px 4px -2px rgba(2, 6, 23, 0.38),
-    0 8px 8px -4px rgba(2, 6, 23, 0.35);
-}
-
-[data-theme='dark'] .navbar__inner {
-  background: transparent;
-  box-shadow: none;
-}
-
-[data-theme='dark'] .navbar:not(.scrolling) .navbar__inner {
-  background: transparent;
-  box-shadow: none;
-}
-
-[data-theme='dark'] .navbar__title,
-[data-theme='dark'] .navbar__item.navbar__link {
-  color: #e5e7eb;
-}
-
-[data-theme='dark'] .navbar__brand:hover {
-  background: rgba(148, 163, 184, 0.16);
-}
-
-[data-theme='dark'] .navbar__brand:hover .navbar__title {
-  background: linear-gradient(90deg, #f8fafc 0%, #8aa2ff 55%, #60a5fa 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-[data-theme='dark'] .navbar__item.navbar__link:hover,
-[data-theme='dark'] .navbar__item.navbar__link--active {
-  color: #f8fafc;
-  background: rgba(148, 163, 184, 0.18);
-}
-
-[data-theme='dark'] .navbar__item.navbar__link[href^='mailto:'] {
-  background: linear-gradient(135deg, #3556ff 0%, #1f2f78 100%);
-  color: #fff;
-  box-shadow: 0 10px 20px rgba(26, 43, 120, 0.35);
-}
-
-[data-theme='dark'] .navbar__item.navbar__link[href^='mailto:']:hover {
-  background: linear-gradient(135deg, #4263ff 0%, #2a3f9b 100%);
-  color: #fff;
-}
-
-@media screen and (max-width: 996px) {
-  html.blog-wrapper .theme-layout-main.main-wrapper,
-  html.plugin-pages .theme-layout-main.main-wrapper:not(.home-page-wrapper):not(.services-page-wrapper):not(.pricing-page-wrapper) {
-    padding-top: 7.2rem;
-  }
-
-  .navbar {
-    padding-top: 0.64rem;
-  }
-
-  .navbar:not(.scrolling) {
-    padding-top: 0.42rem;
-  }
-
-  .navbar__inner {
-    width: min(1600px, calc(100% - 1.6rem));
-    min-height: 72px;
-    padding: 0.5rem 0.88rem;
-  }
-
-  .navbar__title {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  html.blog-wrapper .theme-layout-main.main-wrapper,
-  html.plugin-pages .theme-layout-main.main-wrapper:not(.home-page-wrapper):not(.services-page-wrapper):not(.pricing-page-wrapper) {
-    padding-top: 6.8rem;
-  }
-}
+/* ---------------------------------------------------------------- footer -- */
 
 .footer {
-  background:
-    radial-gradient(circle at 15% -35%, rgba(66, 99, 255, 0.1), transparent 45%),
-    linear-gradient(180deg, #f8fbff 0%, #ffffff 58%);
-  border-top: 1px solid rgba(17, 24, 39, 0.08);
-  color: #111827;
-  padding-top: 0.7rem;
+  background: var(--voix-paper);
+  border-top: 1px solid var(--voix-rule);
+  color: var(--voix-ink-2);
+  padding: var(--voix-s8) 0 var(--voix-s6);
+  font-size: 0.94rem;
 }
 
 .footer .container-fluid {
-  max-width: 1160px;
+  width: min(var(--voix-content), calc(100% - 3rem));
+  max-width: none;
   margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.footer__links {
-  margin-top: 0.3rem;
-  margin-bottom: 0.6rem;
-}
-
-.footer__col {
-  min-width: 170px;
+  padding: 0;
 }
 
 .footer__title {
-  color: #374151;
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  margin-bottom: 0.95rem;
-}
-
-.footer__link-item {
-  color: #4b5563;
-  font-size: 0.95rem;
+  font-family: var(--voix-font-mono);
+  font-size: var(--voix-micro);
   font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.footer__link-item:hover {
-  color: #2142e7;
-  text-decoration: none;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--voix-ink-3);
+  margin-bottom: var(--voix-s4);
 }
 
 .footer__item {
-  margin: 0.42rem 0;
+  margin: 0.38rem 0;
+}
+
+.footer__link-item {
+  color: var(--voix-ink-2);
+  transition: color 0.16s var(--voix-ease);
+}
+
+.footer__link-item:hover {
+  color: var(--voix-clay-deep);
+  text-decoration: none;
 }
 
 .footer__bottom {
-  border-top: 1px solid rgba(17, 24, 39, 0.08);
-  margin-top: 1.2rem;
-  padding-top: 1.1rem;
-  padding-bottom: 0.2rem;
+  border-top: 1px solid var(--voix-rule);
+  margin-top: var(--voix-s7);
+  padding-top: var(--voix-s5);
 }
 
 .footer__logo {
-  max-width: 86px;
-  width: 100%;
+  max-width: 44px;
+  height: auto;
+  opacity: 0.65;
 }
 
 .footer__copyright {
-  color: #6b7280;
-  font-size: 0.82rem;
+  font-size: var(--voix-small);
+  color: var(--voix-ink-3);
 }
 
-[data-theme='dark'] .footer {
-  background:
-    radial-gradient(circle at 15% -35%, rgba(66, 99, 255, 0.22), transparent 45%),
-    linear-gradient(180deg, #0b1220 0%, #0f172a 58%);
-  border-top: 1px solid rgba(148, 163, 184, 0.2);
-  color: #e5e7eb;
+/* ------------------------------------------------------- long-form pages -- */
+
+/* Docs and blog posts render into `.markdown`, but @theme/MDXPage renders a
+   bare <article> with no class of its own - so the standalone Markdown pages
+   (/terms/, /imprint/, /confidentiality/) need the second selector or they get
+   none of this. `:is()` keeps it to one rule per property instead of two. */
+
+:is(.markdown, html.mdx-page article) {
+  --ifm-h1-vertical-rhythm-bottom: 1;
+  font-size: 1.0125rem;
+  line-height: 1.75;
+  color: var(--voix-ink-2);
 }
 
-[data-theme='dark'] .footer__title {
-  color: #cbd5e1;
+:is(.markdown, html.mdx-page article) > h1:first-child {
+  font-size: var(--voix-display-2);
+  line-height: 1.08;
+  margin-bottom: var(--voix-s5);
 }
 
-[data-theme='dark'] .footer__link-item {
-  color: #cbd5e1;
+:is(.markdown, html.mdx-page article) h2 {
+  font-size: var(--voix-display-3);
+  line-height: 1.2;
+  margin-top: var(--voix-s7);
+  padding-top: var(--voix-s5);
+  border-top: 1px solid var(--voix-rule);
+  color: var(--voix-ink);
 }
 
-[data-theme='dark'] .footer__link-item:hover {
-  color: #8aa2ff;
+:is(.markdown, html.mdx-page article) h3 {
+  font-size: var(--voix-title);
+  margin-top: var(--voix-s6);
+  color: var(--voix-ink);
 }
 
-[data-theme='dark'] .footer__copyright {
-  color: #94a3b8;
+:is(.markdown, html.mdx-page article) h4 {
+  margin-top: var(--voix-s5);
+  color: var(--voix-ink);
 }
 
-[data-theme='dark'] .footer__bottom {
-  border-top-color: rgba(148, 163, 184, 0.2);
+:is(.markdown, html.mdx-page article) :is(p, li) {
+  max-width: var(--voix-measure);
+}
+
+:is(.markdown, html.mdx-page article) strong {
+  color: var(--voix-ink);
+  font-weight: 600;
+}
+
+:is(.markdown, html.mdx-page article) blockquote {
+  border-left: 2px solid var(--voix-clay);
+  background: transparent;
+  padding: 0.1rem 0 0.1rem var(--voix-s5);
+  margin: var(--voix-s6) 0;
+  font-family: var(--voix-font-display);
+  font-size: 1.14rem;
+  font-style: italic;
+  color: var(--voix-ink);
+}
+
+/* Infima ships `display: block; overflow: auto` on tables so wide ones scroll.
+   `display: table` is nicer at desktop width, but `overflow` does nothing on a
+   table box - so below the breakpoint the block/scroll behaviour has to come
+   back, or a wide table pushes the whole page sideways (WCAG 1.4.10 Reflow). */
+:is(.markdown, html.mdx-page article) table {
+  display: table;
+  width: 100%;
+  font-size: 0.94rem;
+  border-collapse: collapse;
 }
 
 @media screen and (max-width: 996px) {
+  :is(.markdown, html.mdx-page article) table {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
+:is(.markdown, html.mdx-page article) table th {
+  font-family: var(--voix-font-mono);
+  font-size: var(--voix-micro);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--voix-ink-3);
+  text-align: left;
+}
+
+:is(.markdown, html.mdx-page article) table :is(th, td) {
+  border: 0;
+  border-bottom: 1px solid var(--voix-rule);
+  padding: 0.7rem 0.9rem 0.7rem 0;
+}
+
+:is(.markdown, html.mdx-page article) code {
+  border: 1px solid var(--voix-rule);
+  border-radius: 4px;
+  color: var(--voix-ink);
+}
+
+:is(.markdown, html.mdx-page article) a {
+  color: var(--voix-clay-deep);
+  font-weight: 500;
+}
+
+:is(.markdown, html.mdx-page article) img {
+  border-radius: var(--voix-r-md);
+  border: 1px solid var(--voix-rule);
+}
+
+.theme-code-block {
+  border-radius: var(--voix-r-md) !important;
+  box-shadow: none !important;
+  border: 1px solid var(--voix-rule);
+}
+
+.theme-doc-markdown .theme-doc-toc-desktop,
+.table-of-contents {
+  border-left: 1px solid var(--voix-rule);
+  font-size: 0.86rem;
+}
+
+.table-of-contents__link {
+  color: var(--voix-ink-3);
+}
+
+.table-of-contents__link--active,
+.table-of-contents__link:hover {
+  color: var(--voix-clay-deep);
+}
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--voix-rule) !important;
+}
+
+.menu {
+  font-size: 0.92rem;
+  padding: var(--voix-s5) var(--voix-s4) !important;
+}
+
+.menu__link {
+  border-radius: var(--voix-r-sm);
+}
+
+.menu__list-item-collapsible .menu__link {
+  font-weight: 500;
+}
+
+.pagination-nav__link {
+  border: 1px solid var(--voix-rule);
+  border-radius: var(--voix-r-md);
+  transition: border-color 0.16s var(--voix-ease);
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--voix-clay);
+}
+
+.pagination-nav__sublabel {
+  font-family: var(--voix-font-mono);
+  font-size: var(--voix-micro);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--voix-ink-3);
+}
+
+.pagination-nav__label {
+  font-family: var(--voix-font-display);
+  font-weight: 600;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  background: var(--voix-clay-wash);
+  color: var(--voix-clay-deep);
+}
+
+.alert {
+  border-color: var(--voix-rule);
+  background: var(--voix-sunk);
+  color: var(--voix-ink-2);
+}
+
+.alert--info {
+  border-left-color: var(--voix-clay);
+}
+
+.alert a {
+  color: var(--voix-clay-deep);
+}
+
+/* Blog index and post chrome */
+
+.blog-wrapper .container article header h2 a,
+article header h1 {
+  font-family: var(--voix-font-display);
+}
+
+.blog-wrapper .avatar__name,
+.blog-wrapper .avatar__subtitle {
+  font-size: var(--voix-small);
+}
+
+/* Standalone Markdown pages (/terms/, /imprint/, ...) come through the pages
+   plugin with no sidebar, so they need their own measure and top rhythm. */
+
+html.mdx-page .theme-layout-main > .container.margin-vert--lg {
+  width: min(var(--voix-narrow), calc(100% - 3rem));
+  max-width: none;
+  margin: var(--voix-s8) auto var(--voix-s9);
+  padding: 0;
+}
+
+/* ------------------------------------------------------------ responsive -- */
+
+@media screen and (max-width: 996px) {
+  .navbar__inner,
   .footer .container-fluid {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    width: calc(100% - 2rem);
   }
 
-  .footer__bottom {
-    margin-top: 1rem;
+  .markdown h2 {
+    margin-top: var(--voix-s6);
+  }
+}
+
+/* ------------------------------------------------------------------ a11y -- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  .navbar,
+  .footer,
+  .theme-doc-sidebar-container,
+  .table-of-contents {
+    display: none !important;
   }
 }

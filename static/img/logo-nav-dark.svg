@@ -1,49 +1,9 @@
-<svg width="48" height="48" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="voix logo">
-  <style>
-    .base {
-      stroke: #e5e7eb;
-      transition: opacity 0.2s ease;
-    }
-    .grad {
-      stroke: url(#gradientsvg);
-      opacity: 0;
-      transition: opacity 0.2s ease;
-    }
-    svg:hover .base {
-      opacity: 0;
-    }
-    svg:hover .grad {
-      opacity: 1;
-    }
-  </style>
-  <rect x="0" y="0" width="100%" height="100%" fill="transparent" />
+<svg xmlns="http://www.w3.org/2000/svg" width="172" height="102" viewBox="14 50 172 102" role="img" aria-label="voix">
   <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path class="base" d="M58 62l42 78 42-78" stroke-width="16" />
-    <path class="base" d="M60 88c-10 10-16 24-16 40" stroke-width="10" opacity="0.7" />
-    <path class="base" d="M140 88c10 10 16 24 16 40" stroke-width="10" opacity="0.7" />
-    <path class="base" d="M44 80c-14 14-22 33-22 54" stroke-width="6" opacity="0.45" />
-    <path class="base" d="M156 80c14 14 22 33 22 54" stroke-width="6" opacity="0.45" />
-
-    <path class="grad" d="M58 62l42 78 42-78" stroke-width="16" />
-    <path class="grad" d="M60 88c-10 10-16 24-16 40" stroke-width="10" opacity="0.7" />
-    <path class="grad" d="M140 88c10 10 16 24 16 40" stroke-width="10" opacity="0.7" />
-    <path class="grad" d="M44 80c-14 14-22 33-22 54" stroke-width="6" opacity="0.45" />
-    <path class="grad" d="M156 80c14 14 22 33 22 54" stroke-width="6" opacity="0.45" />
+    <path d="M58 62l42 78 42-78" stroke="#F0EEE6" stroke-width="16"/>
+    <path d="M60 88c-10 10-16 24-16 40" stroke="#E08767" stroke-width="10" opacity="0.85"/>
+    <path d="M140 88c10 10 16 24 16 40" stroke="#E08767" stroke-width="10" opacity="0.85"/>
+    <path d="M44 80c-14 14-22 33-22 54" stroke="#E08767" stroke-width="6" opacity="0.5"/>
+    <path d="M156 80c14 14 22 33 22 54" stroke="#E08767" stroke-width="6" opacity="0.5"/>
   </g>
-  <defs>
-    <linearGradient id="gradientsvg" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="100%" y2="10%">
-      <stop offset="0%" stop-color="#FFAC15">
-        <animate attributeName="stop-color" values="#FFAC15;#03B5ED;#EA12AD;#2200FF;#FFAC15" dur="4s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="100%" stop-color="#EA12AD">
-        <animate attributeName="stop-color" values="#CA15AD;#4200FF;#FDBC15;#03B5ED;#CA15AD" dur="4s" repeatCount="indefinite" />
-      </stop>
-      <animateTransform
-        attributeName="gradientTransform"
-        type="rotate"
-        values="360 .5 .5;0 .5 .5"
-        dur="10s"
-        repeatCount="indefinite" />
-    </linearGradient>
-  </defs>
 </svg>

@@ -3,6 +3,13 @@ slug: no-license-portfolio-stack
 title: The no-license portfolio stack
 authors: [voix]
 tags: [pricing, process]
+description: Portfolio-era notes on an open-source publishing stack with no per-seat fees or paywalled tools, and what is actually billed after the build.
+keywords:
+  - open source portfolio
+  - no license fees
+  - GitHub Pages hosting
+  - portfolio costs
+  - site ownership
 ---
 
 voix sites are built on an open-source stack, which means you never pay

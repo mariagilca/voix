@@ -3,10 +3,17 @@ slug: docs-migration-playbook
 title: A practical docs migration playbook
 authors: [voix]
 tags: [docs-migration, governance]
+description: A short playbook for the parts of a docs migration that outlast cutover, from scope and owners to quality gates, redirects, and contributor training.
+keywords:
+  - docs migration playbook
+  - migration governance
+  - documentation handover
+  - redirect planning
+  - documentation quality gates
 ---
 
-Most documentation migrations fail in the handover phase, not in content
-conversion.
+Documentation migrations fail in the handover phase more often than in content
+conversion, and handover is the part nobody scopes.
 
 <!-- truncate -->
 
