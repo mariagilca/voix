@@ -1,0 +1,656 @@
+/* Shared kit styles. Every page composes these; no page restyles them. */
+
+/* ----------------------------------------------------------- primitives -- */
+
+.eyebrow {
+  display: block;
+  font-family: var(--voix-font-mono);
+  font-size: var(--voix-micro);
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--voix-ink-3);
+  margin: 0 0 var(--voix-s4);
+}
+
+.eyebrowClay {
+  color: var(--voix-clay-deep);
+}
+
+.container {
+  width: min(var(--voix-content), calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+.narrow {
+  width: min(var(--voix-narrow), calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+/* -------------------------------------------------------------- section -- */
+
+.section {
+  position: relative;
+  padding-block: var(--voix-section);
+  /* No scroll-margin here: html { scroll-padding-top } in the token layer is
+     the single source of anchor offset. Both would stack to 10rem. */
+}
+
+.tonePaper {
+  background: var(--voix-paper);
+}
+
+.toneSunk {
+  background: var(--voix-sunk);
+}
+
+.ruled {
+  border-top: 1px solid var(--voix-rule);
+}
+
+.sectionHead {
+  margin-bottom: var(--voix-s7);
+}
+
+.sectionHeadCenter {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-family: var(--voix-font-display);
+  font-size: var(--voix-display-2);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.022em;
+  color: var(--voix-ink);
+  margin: 0;
+  max-width: 22ch;
+}
+
+.sectionHeadCenter .sectionTitle {
+  max-width: 26ch;
+  margin-inline: auto;
+}
+
+.sectionLead {
+  font-size: var(--voix-body-lg);
+  line-height: 1.62;
+  color: var(--voix-ink-2);
+  margin: var(--voix-s4) 0 0;
+  max-width: 56ch;
+}
+
+.sectionHeadCenter .sectionLead {
+  margin-inline: auto;
+}
+
+/* The anchor slug. Real deep links, rendered in the register of the thing
+   this studio sells. Hidden until the heading is hovered or focused. */
+
+.anchor {
+  display: inline-block;
+  margin-left: 0.6rem;
+  font-family: var(--voix-font-mono);
+  font-size: 0.68em;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--voix-ink-3);
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-0.2rem);
+  transition: opacity 0.18s var(--voix-ease), transform 0.18s var(--voix-ease);
+  vertical-align: middle;
+}
+
+.sectionHead:hover .anchor,
+.anchor:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+.anchor:hover {
+  color: var(--voix-clay-deep);
+}
+
+/* --------------------------------------------------------------- layout -- */
+
+.grid {
+  display: grid;
+  gap: var(--voix-s5);
+}
+
+.cols2 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+}
+
+.cols3 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+}
+
+.cols4 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+}
+
+/* ----------------------------------------------------------------- card -- */
+
+.card {
+  background: var(--voix-card);
+  border: 1px solid var(--voix-rule);
+  border-radius: var(--voix-r-md);
+  padding: var(--voix-s5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--voix-s3);
+  transition: border-color 0.2s var(--voix-ease),
+    transform 0.2s var(--voix-ease);
+}
+
+.cardLink:hover {
+  border-color: var(--voix-clay);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.cardQuiet {
+  background: transparent;
+}
+
+/* Declared after .card so the border shorthand above cannot reset it. */
+.cardAccent {
+  border-color: var(--voix-clay);
+  box-shadow: var(--voix-lift);
+}
+
+.cardTitle {
+  font-family: var(--voix-font-display);
+  font-size: var(--voix-title);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+  color: var(--voix-ink);
+  margin: 0;
+}
+
+.cardBody {
+  font-size: var(--voix-body);
+  line-height: 1.65;
+  color: var(--voix-ink-2);
+  margin: 0;
+}
+
+.cardIndex {
+  font-family: var(--voix-font-mono);
+  font-size: var(--voix-micro);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--voix-clay-deep);
+}
+
+/* -------------------------------------------------------------- buttons -- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  height: 46px;
+  padding-inline: 1.35rem;
+  border-radius: var(--voix-r-sm);
+  border: 1px solid transparent;
+  font-family: var(--voix-font-body);
+  font-size: var(--voix-body);
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.16s var(--voix-ease),
+    border-color 0.16s var(--voix-ease), color 0.16s var(--voix-ease);
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.buttonPrimary {
+  background: var(--voix-clay-deep);
+  color: var(--voix-on-clay);
+}
+
+.buttonPrimary:hover {
+  background: var(--voix-clay-hover);
+  color: var(--voix-on-clay);
+}
+
+.buttonSecondary {
+  background: transparent;
+  border-color: var(--voix-rule-strong);
+  color: var(--voix-ink);
+}
+
+.buttonSecondary:hover {
+  border-color: var(--voix-ink);
+  color: var(--voix-ink);
+}
+
+.buttonQuiet {
+  height: auto;
+  padding: 0;
+  /* .button sets nowrap for box-shaped buttons; a text link has to reflow. */
+  white-space: normal;
+  background: none;
+  color: var(--voix-clay-deep);
+  font-weight: 500;
+}
+
+.buttonQuiet:hover {
+  color: var(--voix-ink);
+}
+
+/* On dark the accent inverts: --voix-clay is the light colour there, and
+   --voix-on-clay flips to near-black, so only the fill needs restating. */
+[data-theme='dark'] .buttonPrimary {
+  background: var(--voix-clay);
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--voix-s3);
+  align-items: center;
+}
+
+/* ---------------------------------------------------------- page header -- */
+
+.pageHeader {
+  padding-block: clamp(3.5rem, 1.5rem + 6vw, 6rem) var(--voix-section);
+  border-bottom: 1px solid var(--voix-rule);
+}
+
+.pageTitle {
+  font-family: var(--voix-font-display);
+  font-size: var(--voix-display-1);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.026em;
+  color: var(--voix-ink);
+  margin: 0;
+  max-width: 17ch;
+}
+
+.pageLead {
+  font-size: var(--voix-body-lg);
+  line-height: 1.62;
+  color: var(--voix-ink-2);
+  margin: var(--voix-s5) 0 0;
+  max-width: 58ch;
+}
+
+.pageHeader .buttonRow {
+  margin-top: var(--voix-s6);
+}
+
+/* ---------------------------------------------------------------- facts -- */
+
+/* A short row of claims. Mono label above, plain sentence below: no big
+   numbers unless the number is real. */
+
+.factRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: var(--voix-s5);
+  margin-top: var(--voix-s7);
+  padding-top: var(--voix-s5);
+  border-top: 1px solid var(--voix-rule);
+}
+
+.factLabel {
+  display: block;
+  font-family: var(--voix-font-mono);
+  font-size: var(--voix-micro);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--voix-clay-deep);
+  margin-bottom: 0.4rem;
+}
+
+.factText {
+  font-size: var(--voix-body);
+  line-height: 1.55;
+  color: var(--voix-ink-2);
+  margin: 0;
+}
+
+/* ------------------------------------------------------------------ cta -- */
+
+.cta {
+  padding-block: var(--voix-section);
+  border-top: 1px solid var(--voix-rule);
+  background: var(--voix-paper);
+}
+
+.ctaInner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--voix-s6);
+  align-items: end;
+  justify-content: space-between;
+}
+
+.ctaCopy {
+  flex: 1 1 26rem;
+}
+
+.ctaTitle {
+  font-family: var(--voix-font-display);
+  font-size: var(--voix-display-2);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.022em;
+  color: var(--voix-ink);
+  margin: 0;
+  max-width: 18ch;
+}
+
+.ctaLead {
+  font-size: var(--voix-body-lg);
+  line-height: 1.6;
+  color: var(--voix-ink-2);
+  margin: var(--voix-s4) 0 0;
+  max-width: 48ch;
+}
+
+/* ------------------------------------------------------------ page rail -- */
+
+/* A page index, fixed to the left edge. The homepage of a documentation
+   studio should be navigable the way documentation is. */
+
+/* The landmark itself is hidden, not just the list inside it: a named nav with
+   display:none contents is a landmark with nothing in it. */
+.railNav {
+  display: none;
+}
+
+/* 1600px, not 1500: the gutter is (viewport - 1180px) / 2, so at 1500 there is
+   only 160px beside the content and the longer labels ran under it. */
+@media (min-width: 1600px) {
+  .railNav {
+    display: block;
+  }
+}
+
+/* Anchored to the content column's left edge rather than the viewport's, and
+   laid out right-to-left, so the ticks line up against the content and the
+   labels grow away from it. Overlap is then impossible by construction. */
+.rail {
+  position: fixed;
+  right: calc(50% + var(--voix-content) / 2 + 1.5rem);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* 10rem + the 14px tick + the 0.6rem gap is ~184px. The gutter beside the
+   1180px content column is (viewport - 1180) / 2, so at the 1600px breakpoint
+   there are 210px available and the rail clears the viewport edge. */
+.railItem {
+  margin: 0;
+  max-width: 10rem;
+}
+
+.railLink {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.28rem 0;
+  font-family: var(--voix-font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  /* No opacity dimming: --voix-ink-3 at 65% composites to about 2.6:1 on
+     ivory, and this is 11px text. The tick length carries the hierarchy
+     instead. */
+  color: var(--voix-ink-3);
+  text-decoration: none;
+  transition: color 0.2s var(--voix-ease);
+}
+
+.railLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.railLink::before {
+  content: '';
+  width: 14px;
+  height: 1px;
+  background: currentColor;
+  flex: none;
+  transition: width 0.2s var(--voix-ease);
+}
+
+.railLink:hover {
+  color: var(--voix-ink);
+  text-decoration: none;
+}
+
+.railActive {
+  color: var(--voix-clay-deep);
+}
+
+.railActive::before {
+  width: 26px;
+}
+
+/* --------------------------------------------------- signature: the diff -- */
+
+.diff {
+  border: 1px solid var(--voix-rule);
+  border-radius: var(--voix-r-md);
+  background: var(--voix-card);
+  overflow: hidden;
+  font-family: var(--voix-font-mono);
+  font-size: 0.78rem;
+  line-height: 1.75;
+  box-shadow: var(--voix-lift);
+}
+
+.diffHead {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--voix-rule);
+  background: var(--voix-sunk);
+  font-size: var(--voix-micro);
+  letter-spacing: 0.06em;
+  color: var(--voix-ink-3);
+}
+
+.diffDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--voix-clay);
+  flex: none;
+}
+
+.diffBody {
+  margin: 0;
+  padding: 0.7rem 0;
+  overflow-x: auto;
+  /* Infima gives <pre> the dark code-block background; this one is a document,
+     not a code sample, so it takes the card surface instead. */
+  background: var(--voix-card);
+  color: var(--voix-ink-2);
+  border-radius: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.diffLine {
+  display: grid;
+  grid-template-columns: 1.6rem 1fr;
+  align-items: baseline;
+  padding-right: 0.9rem;
+  white-space: pre;
+  color: var(--voix-ink-2);
+  animation: diffIn 0.42s var(--voix-ease) both;
+  animation-delay: calc(var(--i) * 45ms + 120ms);
+}
+
+.diffGutter {
+  text-align: center;
+  color: var(--voix-ink-3);
+  opacity: 0.55;
+  user-select: none;
+}
+
+.diffMinus {
+  background: var(--voix-minus-wash);
+  color: var(--voix-minus);
+}
+
+.diffMinus .diffGutter {
+  color: var(--voix-minus);
+  opacity: 1;
+}
+
+.diffPlus {
+  background: var(--voix-plus-wash);
+  color: var(--voix-plus);
+}
+
+.diffPlus .diffGutter {
+  color: var(--voix-plus);
+  opacity: 1;
+}
+
+.diffMeta {
+  color: var(--voix-ink-3);
+  background: var(--voix-paper);
+  font-style: normal;
+}
+
+.diffCaption {
+  margin: var(--voix-s4) 0 0;
+  font-family: var(--voix-font-mono);
+  font-size: var(--voix-micro);
+  line-height: 1.7;
+  color: var(--voix-ink-3);
+  max-width: 52ch;
+}
+
+@keyframes diffIn {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ----------------------------------------------------------------- misc -- */
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--voix-s3);
+}
+
+.listItem {
+  display: grid;
+  grid-template-columns: 1.1rem 1fr;
+  gap: 0.6rem;
+  align-items: baseline;
+  font-size: var(--voix-body);
+  line-height: 1.6;
+  color: var(--voix-ink-2);
+}
+
+.listItem::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-top: 0.5rem;
+  border-radius: 1px;
+  background: var(--voix-clay);
+  transform: rotate(45deg);
+}
+
+.dl {
+  margin: 0;
+  display: grid;
+  gap: 0;
+  /* Lets the row collapse on how much space the list actually has, rather than
+     on viewport width - a list inside a narrow card on a wide screen was
+     leaving the description a ~120px ribbon. */
+  container-type: inline-size;
+}
+
+.dlRow {
+  display: grid;
+  grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
+  gap: var(--voix-s5);
+  padding: var(--voix-s4) 0;
+  border-top: 1px solid var(--voix-rule);
+}
+
+.dlRow:last-child {
+  border-bottom: 1px solid var(--voix-rule);
+}
+
+.dlTerm {
+  font-family: var(--voix-font-mono);
+  font-size: var(--voix-micro);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--voix-ink-3);
+  padding-top: 0.2rem;
+}
+
+.dlDesc {
+  margin: 0;
+  font-size: var(--voix-body);
+  line-height: 1.65;
+  color: var(--voix-ink-2);
+}
+
+@container (max-width: 40rem) {
+  .dlRow {
+    grid-template-columns: 1fr;
+    gap: var(--voix-s2);
+  }
+}
+
+/* Fallback for engines without container queries. */
+@supports not (container-type: inline-size) {
+  @media (max-width: 640px) {
+    .dlRow {
+      grid-template-columns: 1fr;
+      gap: var(--voix-s2);
+    }
+  }
+}
+
+.dlStacked .dlRow {
+  grid-template-columns: 1fr;
+  gap: var(--voix-s2);
+}

@@ -3,6 +3,13 @@ slug: is-your-docs-strategy-ready-for-ai
 title: Is your documentation strategy ready for AI?
 authors: [voix]
 tags: [docs-strategy, docs-architecture, governance]
+description: Seven architecture decisions, from a single source of truth to metadata and access control, that decide whether documentation is usable by AI.
+keywords:
+  - AI ready documentation
+  - documentation architecture
+  - content metadata
+  - single source of truth
+  - docs as code
 ---
 
 Your documentation is one of your most strategic product assets. But in many
@@ -101,8 +108,8 @@ metadata, and governance are defined.
 
 ### Can we become AI-ready without rewriting everything?
 
-Yes. Most teams can phase this work by prioritizing critical docs, adding
-metadata, and introducing templates and standards over time.
+Yes. The work phases well. Prioritize critical docs, add metadata, then
+introduce templates and standards over time.
 
 ### Do we need to replace our LMS or support portal?
 

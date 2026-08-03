@@ -1,0 +1,40 @@
+/**
+ * Layout for /case-studies/.
+ *
+ * Composition only. Every scenario is built from kit components; this file
+ * adds the vertical rhythm between the blocks inside a scenario and one
+ * measure cap for the prose. No kit component is restyled here, and every
+ * value is a token.
+ */
+
+/* The four blocks of a scenario — situation, phases, outcome, marker — read as
+   one unit, separated by more air than the kit's default card gap. */
+.scenario {
+  display: grid;
+  gap: var(--voix-s7);
+}
+
+/* A labelled block: mono eyebrow directly above the grid it introduces. */
+.block {
+  display: grid;
+  gap: var(--voix-s5);
+}
+
+/* The kit's Eyebrow carries its own bottom margin, which double-counts against
+   a grid gap. Flush it wherever the gap already does the spacing. */
+.flush {
+  margin-bottom: 0;
+}
+
+/* Cap the block on the house measure so these long paragraphs do not run the
+   full content width. No arithmetic against the kit's term column: the list
+   collapses on its own container width, so at this cap it stacks and every
+   line of description lands on the measure. */
+.prose {
+  max-width: var(--voix-measure);
+}
+
+.closing {
+  display: grid;
+  gap: var(--voix-s7);
+}

@@ -1,0 +1,14 @@
+{
+  "name": "voix",
+  "short_name": "voix",
+  "description": "Documentation migration to open-source stacks you own, with no vendor lock-in.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#faf9f5",
+  "theme_color": "#faf9f5",
+  "icons": [
+    {"src": "/img/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/img/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "/img/favicon.svg", "sizes": "any", "type": "image/svg+xml"}
+  ]
+}

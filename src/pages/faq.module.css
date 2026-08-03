@@ -1,0 +1,86 @@
+/**
+ * Layout for /faq/ only.
+ *
+ * The kit supplies the page header, the sections, the rail and the CTA. What
+ * is missing is a two-column question/answer row: the kit's DescriptionList
+ * cannot carry an <h3>, and an answer engine needs a real heading per
+ * question. So this file adds that one row shape, in the same hairline
+ * register as the kit's definition list, and nothing else.
+ */
+
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--voix-s2) var(--voix-s5);
+  margin-top: var(--voix-s6);
+}
+
+.jumpLink {
+  font-family: var(--voix-font-mono);
+  font-size: var(--voix-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--voix-ink-3);
+  text-decoration: none;
+}
+
+.jumpLink:hover {
+  color: var(--voix-clay-deep);
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------- question / answer */
+
+.qaList {
+  display: grid;
+  gap: 0;
+}
+
+.qa {
+  display: grid;
+  grid-template-columns: minmax(0, 21rem) minmax(0, 1fr);
+  gap: var(--voix-s5) var(--voix-s7);
+  padding: var(--voix-s5) 0;
+  border-top: 1px solid var(--voix-rule);
+}
+
+.qa:last-child {
+  border-bottom: 1px solid var(--voix-rule);
+}
+
+/* Mirrors .cardTitle in src/components/site/styles.module.css, values included.
+   A question is one half of a <dl>-shaped row, and a <Card> would wrap it in an
+   <article> with a border and padding, which is the wrong box for a hairline
+   row. Keep these values identical to the kit rule: if .cardTitle changes,
+   change this with it. No scroll-margin-top — html { scroll-padding-top } in
+   src/css/custom.css is the single source of anchor offset. */
+.question {
+  margin: 0;
+  font-family: var(--voix-font-display);
+  font-size: var(--voix-title);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+  color: var(--voix-ink);
+  text-wrap: balance;
+}
+
+.answer {
+  margin: 0;
+  max-width: var(--voix-measure);
+  font-size: var(--voix-body);
+  line-height: 1.7;
+  color: var(--voix-ink-2);
+}
+
+/* No rule for links in an answer: --ifm-link-color is already --voix-clay-deep
+   site-wide, and a weight bump here would render the same cross-link semibold
+   on /faq/ and regular everywhere else. */
+
+@media (max-width: 996px) {
+  .qa {
+    grid-template-columns: 1fr;
+    gap: var(--voix-s3);
+    padding: var(--voix-s5) 0;
+  }
+}

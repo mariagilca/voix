@@ -37,3 +37,47 @@ docs-strategy:
   label: Docs Strategy
   permalink: /docs-strategy
   description: Documentation planning tied to product and support outcomes.
+
+content-audit:
+  label: Content Audit
+  permalink: /content-audit
+  description: Inventorying documentation, classifying rot, and deciding what moves.
+
+redirects:
+  label: Redirects
+  permalink: /redirects
+  description: URL continuity, redirect maps, and link preservation during a migration.
+
+# Tags inherited from the studio's earlier portfolio work. Defined here so the
+# tag pages carry their own description instead of falling back to the blog's,
+# which would leave six indexable pages sharing one meta description.
+
+process:
+  label: Process
+  permalink: /process-notes
+  description: How the work runs, from first conversation through handover.
+
+pricing:
+  label: Pricing
+  permalink: /pricing-notes
+  description: How projects are scoped, quoted, and paid for.
+
+portfolio:
+  label: Portfolio
+  permalink: /portfolio
+  description: Building and maintaining a portfolio site on an open-source stack.
+
+maintenance:
+  label: Maintenance
+  permalink: /maintenance
+  description: Keeping a published site current after launch.
+
+voice:
+  label: Voice
+  permalink: /voice
+  description: Finding and holding a consistent voice across written work.
+
+acting:
+  label: Acting
+  permalink: /acting
+  description: Portfolio guidance for performers and casting submissions.

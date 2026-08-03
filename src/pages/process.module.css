@@ -1,0 +1,106 @@
+/**
+ * Layout for /process/.
+ *
+ * The components all come from the kit; this file only arranges things the kit
+ * has no opinion about: the numbered phase index, the rhythm of prose inside a
+ * definition-list description, and the clay-ruled asides. Every value is a
+ * token.
+ */
+
+/* ----------------------------------------------------- the phase index -- */
+
+/* A true sequence, so it is numbered. Hairline rows rather than cards: this is
+   an index, not a set of choices. */
+
+.sequence {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sequenceItem {
+  border-top: 1px solid var(--voix-rule);
+}
+
+.sequenceItem:last-child {
+  border-bottom: 1px solid var(--voix-rule);
+}
+
+.sequenceLink {
+  display: grid;
+  grid-template-columns: var(--voix-s6) minmax(0, 15rem) minmax(0, 1fr);
+  gap: var(--voix-s5);
+  align-items: baseline;
+  padding: var(--voix-s4) 0;
+  color: var(--voix-ink-2);
+  text-decoration: none;
+  transition: color 0.16s var(--voix-ease);
+}
+
+.sequenceLink:hover {
+  color: var(--voix-ink);
+  text-decoration: none;
+}
+
+.sequenceNum {
+  font-family: var(--voix-font-mono);
+  font-size: var(--voix-micro);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--voix-clay-deep);
+}
+
+.sequenceLabel {
+  font-weight: 500;
+  color: var(--voix-ink);
+}
+
+.sequenceText {
+  font-size: var(--voix-small);
+  line-height: 1.6;
+}
+
+@media (max-width: 996px) {
+  .sequenceLink {
+    grid-template-columns: var(--voix-s6) minmax(0, 1fr);
+    gap: var(--voix-s2) var(--voix-s4);
+  }
+
+  .sequenceText {
+    grid-column: 2;
+  }
+}
+
+/* --------------------------------------------------------------- prose -- */
+
+/* Paragraphs and kit lists stacked inside a <dd>. The kit sets the type; this
+   only sets the space between blocks. */
+
+.prose > * {
+  margin: 0;
+}
+
+.prose > * + * {
+  margin-top: var(--voix-s4);
+}
+
+/* --------------------------------------------------------------- asides -- */
+
+/* A short aside attached to a section, set off by a clay left rule and an
+   indent, in the same register as the global blockquote. Named for the look
+   rather than called `.note`: other pages use that name for other things, and
+   a reader jumping between page modules should not have to guess which. */
+
+.clayAside {
+  margin: var(--voix-s6) 0 0;
+  padding-left: var(--voix-s5);
+  border-left: 1px solid var(--voix-clay);
+  font-size: var(--voix-small);
+  line-height: 1.7;
+  color: var(--voix-ink-2);
+  max-width: var(--voix-measure);
+}
+
+.trailer {
+  margin-top: var(--voix-s6);
+}

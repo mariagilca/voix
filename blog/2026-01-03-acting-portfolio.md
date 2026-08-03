@@ -3,9 +3,14 @@ slug: acting-portfolio-gets-you-cast
 title: Build an acting portfolio that gets you cast
 authors: [voix]
 tags: [portfolio, acting, process]
+description: Portfolio-era guidance for actors on gathering materials, writing an honest bio, and owning the site instead of renting a monthly builder.
+keywords:
+  - acting portfolio
+  - actor website
+  - headshots and showreel
+  - casting materials
+  - actor bio
 ---
-
-Ready to work? Start building your portfolio →
 
 A resume lists what you did. A portfolio shows what you can do.
 

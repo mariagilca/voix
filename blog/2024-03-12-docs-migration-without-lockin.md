@@ -3,6 +3,13 @@ slug: docs-migration-without-lockin
 title: How to migrate docs without vendor lock-in
 authors: [voix]
 tags: [docs-migration, docs-as-code]
+description: The five steps that move documentation onto a stack you own, from inventory and target model through conversion, validation, and CI/CD cutover.
+keywords:
+  - vendor lock-in documentation
+  - docs migration steps
+  - open format documentation
+  - Markdown conversion
+  - portable documentation
 ---
 
 Moving documentation out of an expensive platform can feel risky, but staying

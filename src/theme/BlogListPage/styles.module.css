@@ -1,0 +1,43 @@
+.header {
+  padding-bottom: var(--voix-s6);
+  margin-bottom: var(--voix-s7);
+  border-bottom: 1px solid var(--voix-rule);
+}
+
+.eyebrow {
+  font-family: var(--voix-font-mono);
+  font-size: var(--voix-micro);
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--voix-clay-deep);
+  margin: 0 0 var(--voix-s4);
+}
+
+.title {
+  font-family: var(--voix-font-display);
+  font-size: var(--voix-display-2);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.024em;
+  color: var(--voix-ink);
+  margin: 0;
+  max-width: 18ch;
+}
+
+.description {
+  font-size: var(--voix-body-lg);
+  line-height: 1.62;
+  color: var(--voix-ink-2);
+  margin: var(--voix-s4) 0 0;
+  max-width: 58ch;
+}
+
+.pageMarker {
+  font-family: var(--voix-font-mono);
+  font-size: var(--voix-micro);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--voix-ink-3);
+  margin: var(--voix-s4) 0 0;
+}

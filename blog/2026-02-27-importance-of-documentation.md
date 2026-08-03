@@ -3,6 +3,13 @@ slug: importance-of-documentation
 title: Why documentation is a product, not a checklist
 authors: [voix]
 tags: [docs-strategy, docs-architecture]
+description: What changes when documentation is treated as a product with ownership, architecture, and delivery workflows instead of a pre-release checklist.
+keywords:
+  - documentation strategy
+  - docs as a product
+  - documentation ownership
+  - support deflection
+  - release workflow
 ---
 
 Documentation is often treated as a final step before release. That is usually

@@ -1,0 +1,64 @@
+/**
+ * About page — layout only.
+ *
+ * This file arranges kit components; it does not restyle them. No button,
+ * card, heading or eyebrow rules live here, and every value is a token from
+ * src/css/custom.css, so light and dark both come for free.
+ */
+
+/* ------------------------------------------------- prose beside a summary -- */
+
+/* The bio and the location sections both read as an argument on the left with
+   a compact set of checkable facts on the right. */
+
+.split {
+  display: grid;
+  gap: var(--voix-s6);
+  align-items: start;
+}
+
+/* 996px is the site-wide breakpoint: the same one src/css/custom.css and the
+   other page modules switch on. */
+@media (min-width: 996px) {
+  .split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+    gap: var(--voix-s7);
+  }
+}
+
+/* ----------------------------------------------------------------- prose -- */
+
+.prose {
+  max-width: var(--voix-measure);
+  margin: var(--voix-s6) 0 0;
+  font-size: var(--voix-body);
+  line-height: 1.7;
+  color: var(--voix-ink-2);
+}
+
+.prose p {
+  margin: 0 0 var(--voix-s4);
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.flush {
+  margin-top: 0;
+}
+
+/* A structured block sitting between two runs of prose. */
+.block {
+  margin-top: var(--voix-s6);
+}
+
+/* ------------------------------------------------------- inside the cards -- */
+
+.cardText {
+  margin: 0;
+}
+
+.cardAction {
+  margin-top: var(--voix-s5);
+}

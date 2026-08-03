@@ -1,405 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap');
+/**
+ * Pricing page — layout only.
+ *
+ * This file arranges kit components on the pricing page. It does not restyle
+ * them: no button, card, heading or eyebrow rules live here, and every value
+ * is a token from src/css/custom.css so light and dark both come for free.
+ */
 
-:global(:root) {
-  --prc-ink: #111827;
-  --prc-muted: #4b5563;
-  --prc-line: rgba(17, 24, 39, 0.12);
+/* ------------------------------------------------------------- the tiers -- */
+
+/* Not the kit Grid: the migration project needs more width than the two
+   optional add-ons beside it, so this page states its own column ratio. */
+
+.tiers {
+  display: grid;
+  gap: var(--voix-s5);
+  align-items: start;
 }
 
-.page {
-  position: relative;
-  isolation: isolate;
-  color: var(--prc-ink);
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  background: transparent;
+@media (min-width: 996px) {
+  .tiers {
+    grid-template-columns: 1.3fr 1fr 1fr;
+  }
 }
 
-.animatedGradient {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  opacity: 1;
-  pointer-events: none;
-}
+/* The migration is the product; the add-ons render as quiet cards. The extra
+   emphasis is the kit's own `emphasis` prop on the Card, not a border override
+   here: a page-module rule and .card are both single classes, so the winner
+   would depend on bundle order and the kit does not always come last. */
 
-.page > header,
-.page > main {
-  position: relative;
-  z-index: 1;
-}
-
-.hero {
-  position: relative;
-  padding: 8.8rem 0 3rem;
-  overflow: hidden;
-}
-
-.heroGlowA,
-.heroGlowB {
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  border-radius: 999px;
-  pointer-events: none;
-  filter: blur(42px);
-}
-
-.heroGlowA {
-  top: -170px;
-  right: -120px;
-  background: rgba(33, 66, 231, 0.22);
-}
-
-.heroGlowB {
-  bottom: -210px;
-  left: -130px;
-  background: rgba(14, 165, 233, 0.14);
-}
-
-.heroInner {
-  position: relative;
-  max-width: 930px;
-}
-
-.kicker {
-  display: inline-flex;
-  border: 1px solid var(--prc-line);
-  border-radius: 999px;
-  padding: 0.42rem 0.88rem;
-  font-size: 0.78rem;
+/* Two of the three "prices" are phrases, and all three sit under the card's
+   own h3. Held at title size so the price reads as a sibling of that heading
+   rather than as a display number that outranks it. */
+.price {
+  font-family: var(--voix-font-display);
+  font-size: var(--voix-title);
   font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #1d4ed8;
-  background: rgba(255, 255, 255, 0.75);
-  margin-bottom: 1.2rem;
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+  color: var(--voix-ink);
+  margin: 0 0 var(--voix-s3);
 }
 
-.heroTitle {
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  line-height: 1.06;
-  margin-bottom: 1rem;
-  max-width: 18ch;
-}
-
-.heroSubtitle {
-  font-size: 1.06rem;
-  color: var(--prc-muted);
-  max-width: 66ch;
-  line-height: 1.65;
-  margin-bottom: 1.4rem;
-}
-
-.heroActions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-bottom: 1.4rem;
-}
-
-.buttonPrimary,
-.buttonGhost {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  padding: 0.74rem 1.3rem;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.2s ease;
-}
-
-.buttonPrimary {
-  background: linear-gradient(135deg, #111827 0%, #1f2f78 100%);
-  color: #fff;
-  box-shadow: 0 12px 26px rgba(17, 24, 39, 0.2);
-}
-
-.buttonGhost {
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid var(--prc-line);
-  color: var(--prc-ink);
-}
-
-.buttonPrimary:hover,
-.buttonGhost:hover {
-  transform: translateY(-2px);
-}
-
-.statRow {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.8rem;
-}
-
-.statRow div {
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid var(--prc-line);
-  border-radius: 14px;
-  padding: 0.8rem 0.9rem;
-  display: grid;
-  gap: 0.22rem;
-}
-
-.statRow strong {
-  font-size: 0.95rem;
-}
-
-.statRow span {
-  color: var(--prc-muted);
-  font-size: 0.83rem;
-}
-
-.section {
-  padding: 3.7rem 0;
-}
-
-.sectionAlt {
-  background:
-    linear-gradient(180deg, rgba(237, 242, 255, 0.62) 0%, rgba(255, 255, 255, 0.9) 100%);
-  border-top: 1px solid rgba(17, 24, 39, 0.08);
-  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
-}
-
-.sectionHead {
-  max-width: 760px;
-  margin-bottom: 1.8rem;
-}
-
-.sectionTitle {
-  margin-bottom: 0.8rem;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-}
-
-.sectionText {
-  color: var(--prc-muted);
-  line-height: 1.65;
-}
-
-.pricingGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.pricingCard,
-.pricingCardFeatured {
-  border-radius: 20px;
-  border: 1px solid var(--prc-line);
-  background: rgba(255, 255, 255, 0.84);
-  box-shadow: 0 14px 30px rgba(17, 24, 39, 0.08);
-  padding: 1.3rem;
-}
-
-.pricingCardFeatured {
-  background: linear-gradient(180deg, #1f2f78 0%, #2142e7 100%);
-  border-color: rgba(33, 66, 231, 0.35);
-  box-shadow: 0 18px 35px rgba(33, 66, 231, 0.28);
-  color: #fff;
-}
-
-.cardTag {
-  display: inline-flex;
-  border-radius: 999px;
-  border: 1px solid var(--prc-line);
-  background: #fff;
-  padding: 0.26rem 0.58rem;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 0.7rem;
-}
-
-.pricingCardFeatured .cardTag {
-  background: rgba(255, 255, 255, 0.18);
-  border-color: rgba(255, 255, 255, 0.35);
-}
-
-.pricingCard h3,
-.pricingCardFeatured h3 {
-  margin-bottom: 0.42rem;
-}
-
-.priceValue {
-  font-size: 1.6rem;
-  font-weight: 800;
-  margin-bottom: 0.62rem;
-}
-
-.pricingCard p,
-.pricingCardFeatured p {
+.tierText {
   margin: 0;
-  color: var(--prc-muted);
 }
 
-.pricingCardFeatured p {
-  color: rgba(255, 255, 255, 0.85);
+.tierAction {
+  margin-top: var(--voix-s4);
 }
 
-.coverageGrid {
+/* ------------------------------------------------------- supporting copy -- */
+
+.note {
+  max-width: var(--voix-measure);
+  margin: var(--voix-s6) 0 0;
+  padding-top: var(--voix-s5);
+  border-top: 1px solid var(--voix-rule);
+  font-size: var(--voix-body);
+  line-height: 1.7;
+  color: var(--voix-ink-2);
+}
+
+.prose {
+  max-width: var(--voix-measure);
+  margin: var(--voix-s6) 0 0;
+  font-size: var(--voix-body);
+  line-height: 1.7;
+  color: var(--voix-ink-2);
+}
+
+.prose p {
+  margin: 0 0 var(--voix-s4);
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.flush {
+  margin-top: 0;
+}
+
+.actions {
+  margin-top: var(--voix-s5);
+}
+
+/* ------------------------------------------------- answer beside the ask -- */
+
+.split {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.9rem;
+  gap: var(--voix-s6);
+  align-items: start;
 }
 
-.coverageItem {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  border: 1px solid var(--prc-line);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.82);
-  padding: 1rem 1rem 0.95rem;
-}
-
-.coverageItem span {
-  width: 0.55rem;
-  height: 0.55rem;
-  margin-top: 0.46rem;
-  border-radius: 999px;
-  background: #2142e7;
-  flex: 0 0 auto;
-}
-
-.coverageItem p {
-  margin: 0;
-  color: var(--prc-muted);
-  line-height: 1.5;
-}
-
-.focusPanel {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 1rem;
-  border-radius: 22px;
-  border: 1px solid var(--prc-line);
-  background: rgba(255, 255, 255, 0.82);
-  padding: 1.4rem;
-}
-
-.focusList {
-  margin: 0;
-  padding-left: 1rem;
-  display: grid;
-  gap: 0.5rem;
-}
-
-.ctaSection {
-  padding: 2.5rem 0 5.5rem;
-}
-
-.ctaCard {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.6rem;
-  border-radius: 28px;
-  background:
-    radial-gradient(circle at 12% -22%, rgba(59, 130, 246, 0.3), transparent 48%),
-    #111827;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 24px 42px rgba(16, 16, 24, 0.32);
-  padding: 2.1rem;
-}
-
-.ctaTitle {
-  color: #fff;
-  margin-bottom: 0.65rem;
-}
-
-.ctaSubtitle {
-  color: rgba(255, 255, 255, 0.82);
-  margin: 0;
-  max-width: 58ch;
-}
-
-:global([data-theme='dark']) .page {
-  background: transparent;
-  color: #e5e7eb;
-}
-
-:global([data-theme='dark']) .kicker,
-:global([data-theme='dark']) .statRow div,
-:global([data-theme='dark']) .pricingCard,
-:global([data-theme='dark']) .coverageItem,
-:global([data-theme='dark']) .focusPanel {
-  background: rgba(15, 23, 42, 0.82);
-  border-color: rgba(148, 163, 184, 0.3);
-}
-
-:global([data-theme='dark']) .heroSubtitle,
-:global([data-theme='dark']) .sectionText,
-:global([data-theme='dark']) .pricingCard p,
-:global([data-theme='dark']) .coverageItem p,
-:global([data-theme='dark']) .statRow span {
-  color: #94a3b8;
-}
-
-:global([data-theme='dark']) .kicker {
-  color: #b8c7ff;
-}
-
-:global([data-theme='dark']) .buttonGhost {
-  background: rgba(15, 23, 42, 0.72);
-  border-color: rgba(148, 163, 184, 0.3);
-  color: #e5e7eb;
-}
-
-:global([data-theme='dark']) .cardTag {
-  background: rgba(30, 41, 59, 0.9);
-  border-color: rgba(148, 163, 184, 0.35);
-  color: #cbd5e1;
-}
-
-:global([data-theme='dark']) .sectionAlt {
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.72) 0%, rgba(15, 23, 42, 0.9) 100%);
-  border-top-color: rgba(148, 163, 184, 0.2);
-  border-bottom-color: rgba(148, 163, 184, 0.2);
-}
-
-:global([data-theme='dark']) .ctaCard {
-  background:
-    radial-gradient(circle at 12% -22%, rgba(59, 130, 246, 0.35), transparent 48%),
-    #0b1220;
-  border-color: rgba(148, 163, 184, 0.22);
-}
-
-@media screen and (max-width: 996px) {
-  .statRow,
-  .pricingGrid,
-  .coverageGrid,
-  .focusPanel {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    padding-top: 7.2rem;
-  }
-
-  .ctaCard {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  .hero {
-    padding-top: 6.8rem;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .heroTitle {
-    font-size: 2rem;
-  }
-
-  .section {
-    padding: 3rem 0;
-  }
-
-  .ctaCard {
-    padding: 1.35rem;
+@media (min-width: 996px) {
+  .split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+    gap: var(--voix-s7);
   }
 }
